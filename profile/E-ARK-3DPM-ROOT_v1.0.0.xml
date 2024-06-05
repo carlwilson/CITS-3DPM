@@ -1,0 +1,701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 2024-04-22 Draft of E-ARK 3D PM METS Profile 1.0 -->
+<METS_Profile xmlns="http://www.loc.gov/METS_Profile/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mets="http://www.loc.gov/METS/" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/METS_Profile/v2 http://www.loc.gov/standards/mets/profile_docs/mets.profile.v2-0.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd" STATUS="provisional" REGISTRATION="unregistered" ID="3DPMROOTV1.0.0">
+  <URI LOCTYPE="URL" ASSIGNEDBY="local">https://cits3DPM.dilcis.eu/profile/E-ARK-3DPM-ROOT.xml</URI>
+  <title>E-ARK 3D PM root METS Profile 1.0 (cits3dpm_v1_0)</title>
+  <abstract>This is the profile for a root METS following E-ARK 3D PM. It's an extension of the E-ARK CSIP profile.</abstract>
+  <date>2024-04-16T12:00:00</date>
+  <contact>
+    <institution>DILCIS Board</institution>
+    <address>http://dilcis.eu/</address>
+    <email>info@dilcis.eu</email>
+  </contact>
+  <related_profile RELATIONSHIP="Extends" URI="https://earksip.dilcis.eu/profile/E-ARK-CSIP.xml">E-ARK CSIP METS Profile 2.1.0</related_profile>
+  <profile_context>
+    <resource_model>
+      <head>E-ARK 3D PM ROOT profile</head>
+      <p xmlns="http://www.w3.org/1999/xhtml">This profile together with the E-ARK CITS 3D PM document describes the root METS document for an IP conforming to the E-ARK CITS 3D PM.</p>
+    </resource_model>
+  </profile_context>
+  <external_schema>
+    <name>E-ARK SIP METS Extension</name>
+    <URL>https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd</URL>
+    <context>XML-schema for the attributes added by SIP</context>
+    <note>
+      <p xmlns="http://www.w3.org/1999/xhtml">An extension schema with the added attributes for use in this profile.</p>
+      <p xmlns="http://www.w3.org/1999/xhtml">The schema is used with a namespace prefix of sip.</p>
+    </note>
+  </external_schema>
+  <external_schema>
+    <name>E-ARK CSIP METS Extension</name>
+    <URL>http://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd</URL>
+    <context>XML-schema for the attributes added by CSIP</context>
+    <note>
+      <p xmlns="http://www.w3.org/1999/xhtml">An extension schema with the added attributes for use in this profile.</p>
+      <p xmlns="http://www.w3.org/1999/xhtml">The schema is identified using the namespace prefix csip.</p>
+    </note>
+  </external_schema>
+  <description_rules>
+    <p xmlns="http://www.w3.org/1999/xhtml">The filepath must be decoded consistently throughout all file references within the information package.</p>
+  </description_rules>
+  <controlled_vocabularies>
+    <vocabulary ID="VocabularyaltrecordIDTYPE">
+      <name>Alternative record IDs</name>
+      <maintenance_agency>DILCIS Board</maintenance_agency>
+      <URI>http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml</URI>
+      <context>Used in `altrecordID/@TYPE`</context>
+      <description>
+        <p xmlns="http://www.w3.org/1999/xhtml">Describes the type of the alternative record ID.</p>
+      </description>
+    </vocabulary>
+    <vocabulary ID="VocabularyNoteType">
+      <name>Note type</name>
+      <maintenance_agency>DILCIS Board</maintenance_agency>
+      <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml</URI>
+      <context>Used in `@csip:NOTETYPE`</context>
+      <description>
+        <p xmlns="http://www.w3.org/1999/xhtml">Describes the type of a note for an agent.</p>
+      </description>
+    </vocabulary>
+    <vocabulary ID="VocabularyContentInformationTypeSpecification">
+      <name>Content information type specification</name>
+      <maintenance_agency>DILCIS Board</maintenance_agency>
+      <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyContentInformationType.xml</URI>
+      <context>Values for `@csip:CONTENTINFORMATIONTYPE`</context>
+      <description>
+        <p xmlns="http://www.w3.org/1999/xhtml">Lists the names of specific E-ARK content information type specifications supported or maintained in this METS profile.</p>
+      </description>
+    </vocabulary>
+    <vocabulary ID="VocabularyContentCategory">
+      <name>Content Category</name>
+      <maintenance_agency>DILCIS Board</maintenance_agency>
+      <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyContentCategory.xml</URI>
+      <context>Values for `mets/@type`</context>
+      <description>
+        <p xmlns="http://www.w3.org/1999/xhtml">Declares the categorical classification of package content.</p>
+      </description>
+    </vocabulary>
+    <vocabulary ID="VocabularyFileGrpAndStructMapDivisionLabel">
+      <name>File group names</name>
+      <maintenance_agency>DILCIS Board</maintenance_agency>
+      <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyFileGrpAndStructMapDivisionLabel.xml</URI>
+      <context>Values for `fileGrp/@USE`</context>
+      <description>
+        <p xmlns="http://www.w3.org/1999/xhtml">Describes the uses of the file group `&lt;fileGrp&gt;` that are supported by the profile.</p>
+        <p xmlns="http://www.w3.org/1999/xhtml">Own names should be placed in an own extending vocabulary.</p>
+      </description>
+    </vocabulary>
+  </controlled_vocabularies>
+  <structural_requirements>
+    <metsRootElement ID="metsRootElement">
+      <requirement ID="3DPM11" REQLEVEL="MUST" EXAMPLES="metsRootElementExample">
+        <description>
+          <head>METS Profile</head>
+          <p>The value is set to "https://cits3dpm.dilcis.eu/profile/E-ARK-3dpm-ROOT.xml".</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/@PROFILE</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>REF:CSIP-v2.1.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#CSIP1</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM12" REQLEVEL="MUST" RELATEDMAT="VocabularyContentCategory" EXAMPLES="metsRootElementExample">
+        <description>
+          <head>Content Category</head>
+          <p>The `mets/@TYPE` attribute is set to the value "OTHER".</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/@TYPE</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>REF:CSIP-v2.1.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#CSIP2</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM13" REQLEVEL="MUST" RELATEDMAT="VocabularyContentCategory Vocabulary3DPM" EXAMPLES="metsRootElementExample">
+        <description>
+          <head>Other Content Category</head>
+          <p>The `mets/@csip:OTHERTYPE` attribute is set to the value "Product Model Data".</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets[@TYPE='OTHER']/@csip:OTHERTYPE</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>REF:CSIP-v2.1.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#CSIP3</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM14" REQLEVEL="MUST" RELATEDMAT="VocabularyContentInformationTypeSpecification" EXAMPLES="metsRootElementExample">
+        <description>
+          <head>Content Information Type Specification</head>
+          <p>The `mets/@csip:CONTENTINFORMATIONTYPE` attribute is set to  the value "cits3dpm_v1_0"</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/@csip:CONTENTINFORMATIONTYPE</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>REF:CSIP-v2.1.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#CSIP3</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+    </metsRootElement>
+    <metsHdr ID="metsHeaderElement">
+      <requirement ID="3DPM15" REQLEVEL="SHOULD" RELATEDMAT="VocabularyaltrecordIDTYPE" EXAMPLES="metsRootHdrElementExample">
+        <description>
+          <head>Submission agreement</head>
+          <p>There SHOULD be a reference to the Submission Agreement associated with the package as the SIP will contain personal data.</p>
+          <p>`@TYPE` is used with the value "SUBMISSIONAGREEMENT".</p>
+          <p>Note: A machine-readable format is recommended for a better description of a submission agreement.</p>
+          <p>For example, the submission agreement developed by Docuteam GmbH <a href="http://www.loc.gov/standards/mets/profiles/00000041.xml">http://www.loc.gov/standards/mets/profiles/00000041.xml</a></p>
+          <p>A reference code for the Submission Agreement MAY be included with @TYPE used with the value “REFERENCECODE”</p>
+          <p>The Submission Agreement SHOULD contain information related to the location in representation descriptive metadata of references to Verification reports.</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>metsHdr/altRecordID[@TYPE='SUBMISSIONAGREEMENT']</dd>
+            <dt>Cardinality</dt>
+            <dd>0..1</dd>
+            <dt>REF:SIP-v2.1.0</dt>
+            <dd>https://earksip.dilcis.eu/#SIP5</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+    </metsHdr>
+    <dmdSec ID="dmdSecElement">
+      <requirement ID="REF_CSIP_1" REQLEVEL="SHOULD" EXAMPLES="dmdSecExample">
+        <description>
+          <head>Descriptive metadata</head>
+          <p>The 3D PM root METS document dmdSec element SHOULD comly with<a xmlns="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdSec">dmdSec requirements in the CSIP profile</a></p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/dmdSec</dd>
+            <dt>Cardinality</dt>
+            <dd>0..n</dd>
+            <dt>REF:CSIP-v2.1.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#CSIP17</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+    </dmdSec>
+    <amdSec ID="amdSecElement">
+      <requirement ID="REF_CSIP_2" REQLEVEL="SHOULD" EXAMPLES="amdSecExample">
+        <description>
+          <head>Administrative metadata</head>
+          <p>The 3DPM root METS document amdSec element SHOULD comply with <a href="http://earkcsip.dilcis.eu/#534-use-of-the-mets-administrative-metadata-section-element-amdsec"> amdSec requirements in the CSIP profile.</a></p>
+          <dl>
+            <dt>METS xpath</dt>
+            <dd>mets/amdSec</dd>
+            <dt>Cardinality</dt>
+            <dd>0..1</dd>
+            <dt>REF:CSIP-v2.1.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#csip31</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+    </amdSec>
+    <fileSec ID="fileSecElement">
+      <requirement ID="3DPM16" REQLEVEL="MUST" EXAMPLES="fileSecExample">
+        <description>
+          <head>File section</head>
+          <p>The transferred content is placed in a representation folder described with a representation METS document.</p>
+          <p>Only a single file section (`&lt;fileSec&gt;`) element MUST be present.</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/fileSec</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>REF:CSIP-v2.1.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#CSIP58</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM17" REQLEVEL="MUST" EXAMPLES="fileSecExample">
+        <description>
+          <head>Reference to administrative metadata</head>
+          <p>If administrative metadata has been provided at file group 'mets/fileSec/fileGrp/' level this attribute MUST refer to its administrative metadata section by ID.</p>
+          <p>For example if there are rights and/or digital provenance metadata that are general to the package.</p>
+          <p>
+            <dt>METS XPATH</dt>
+            <dd>mets/fileSec/fileGrp/@ADMID</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>REF:CSIP-v2.1.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#61</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+            <dt>dependsOn</dt>
+            <dd>CSIP31</dd>
+          </p>
+        </description>
+      </requirement>
+      <requirement ID="3DPM18" REQLEVEL="MUST" RELATEDMAT="VocabularyContentInformationTypeSpecification" EXAMPLES="fileSecExample">
+        <description>
+          <head>Content Information Type Specification</head>
+          <p>The value of the attribute `mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE` is set to "cits3dpm_v1_0".</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/fileSec/fileGrp[@csip:CONTENTINFORMATIONTYPE='cits3dpm_v1_0 ']</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>REF:CSIP-v2.1.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#CSIP62</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+    </fileSec>
+    <structMap ID="structMapElement">
+      <requirement ID="3DPM19" REQLEVEL="SHOULD" EXAMPLES="structMapExample">
+        <description>
+          <head>Authentication Documentation division</head>
+          <p>Authentication documentation referenced in the file section is described in the structural map with three sub-divisions</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/structMap[@LABEL='CSIP']/div/div/div</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM20" REQLEVEL="MUST" EXAMPLES="structMapExample">
+        <description>
+          <head>Authentication Documentation division identifier</head>
+          <p>Mandatory, xml:id identifier must be unique within the package</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/structMap[@LABEL='CSIP']/div/div/div</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+            <dt>dependsOn</dt>
+            <dd>3DPM19</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM21" REQLEVEL="MUST" RELATEDMAT="VocabularyFileGrpAndStructMapDivisionLabel" EXAMPLES="structMapExample">
+        <description>
+          <head>Authentication Documentation division label</head>
+          <p>The Authentication documentation division &lt;div&gt; element uses the value Authentication Documentation from the vocabuulary as the value for the @LABEL attribute</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/structMap[@LABEL='CSIP']/div/div/div</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+            <dt>dependsOn</dt>
+            <dd>3DPM19</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM22" REQLEVEL="MUST" EXAMPLES="structMapExample">
+        <description>
+          <head>Authentication Documentation file references</head>
+        </description>
+        <p>File groups containing Authentication Documentation are referenced via relevant file group identifier.</p>
+        <dl>
+          <dt>METS XPath</dt>
+          <dd>mets/structMap[@LABEL='CSIP']/div/div/div[@LABEL='Authentication Documentation']/fptr</dd>
+          <dt>Cardinality</dt>
+          <dd>1..n</dd>
+          <dt>since</dt>
+          <dd>v1.0.0</dd>
+          <dt>dependsOn</dt>
+          <dd>3DPM19</dd>
+        </dl>
+      </requirement>
+      <requirement ID="3DPM23" REQLEVEL="MUST" EXAMPLES="structMapExample">
+        <description>
+          <head>Authentication Documentation file group reference pointer</head>
+        </description>
+        <p>A reference by ID, to Authentication Documentation file groups,</p>
+        <dl>
+          <dt>METS XPath</dt>
+          <dd>mets/structMap[@LABEL='CSIP']/div/div/div[@LABEL='Authentication Documentation']/fptr/file@ID</dd>
+          <dt>Cardinality</dt>
+          <dd>1..1</dd>
+          <dt>since</dt>
+          <dd>v1.0.0</dd>
+          <dt>dependsOn</dt>
+          <dd>3DPM19</dd>
+        </dl>
+      </requirement>
+      <requirement ID="3DPM24" REQLEVEL="SHOULD" EXAMPLES="structMapExample">
+        <description>
+          <head>Other Documentation division</head>
+          <p>Other documentation referenced in the file section is described in the structural map with three sub-divisions</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/structMap[@LABEL='CSIP']/div/div/div</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM25" REQLEVEL="MUST" EXAMPLES="structMapExample">
+        <description>
+          <head>Other Documentation division identifier</head>
+          <p>Mandatory, xml:id identifier must be unique within the package</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/structMap[@LABEL='CSIP']/div/div/div</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+            <dt>dependsOn</dt>
+            <dd>3DPM24</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM26" REQLEVEL="MUST" RELATEDMAT="VocabularyFileGrpAndStructMapDivisionLabel" EXAMPLES="structMapExample">
+        <description>
+          <head>Other documentation division label</head>
+          <p>The Other documentation division &lt;div&gt; element uses the value Other Documentation from the vocabuulary as the value for the @LABEL attribute</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/structMap[@LABEL='CSIP']/div/div/div</dd>
+            <dt>Cardinality</dt>
+            <dd>1..1</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+            <dt>dependsOn</dt>
+            <dd>3DPM24</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM27" REQLEVEL="MUST" EXAMPLES="structMapExample">
+        <description>
+          <head>Authentication Documentation file references</head>
+        </description>
+        <p>File groups containing Other Documentation are referenced via relevant file group identifier.</p>
+        <dl>
+          <dt>METS XPath</dt>
+          <dd>mets/structMap[@LABEL='CSIP']/div/div/div[@LABEL='Authentication Documentation']/fptr</dd>
+          <dt>Cardinality</dt>
+          <dd>1..n</dd>
+          <dt>since</dt>
+          <dd>v1.0.0</dd>
+          <dt>dependsOn</dt>
+          <dd>3DPM24</dd>
+        </dl>
+      </requirement>
+      <requirement ID="3DPM28" REQLEVEL="MUST" EXAMPLES="structMapExample">
+        <description>
+          <head>Authentication Documentation file group reference pointer</head>
+        </description>
+        <p>A reference by ID, to Other Documentation file groups,</p>
+        <dl>
+          <dt>METS XPath</dt>
+          <dd>mets/structMap[@LABEL='CSIP']/div/div/div[@LABEL='Authentication Documentation']/fptr/file@ID</dd>
+          <dt>Cardinality</dt>
+          <dd>1..1</dd>
+          <dt>since</dt>
+          <dd>v1.0.0</dd>
+          <dt>dependsOn</dt>
+          <dd>3DPM24</dd>
+        </dl>
+      </requirement>
+      <requirement ID="3DPM29" REQLEVEL="MUST" EXAMPLES="structMapExample">
+        <description>
+          <head>Representation division</head>
+          <p>There must be a discrete div element for each representation of the Product Model.</p>
+          <dl>
+            <dt>METS XPath</dt>
+            <dd>mets/structMap[@LABEL='CSIP']/div/div</dd>
+            <dt>Cardinality</dt>
+            <dd>1..n</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+    </structMap>
+    <structLink ID="structLinkElement">
+      <requirement REQLEVEL="MAY" ID="REF_METS_1">
+        <description>
+          <head>structLink</head>
+          <p>Section not defined or used in CSIP, additional own uses may occur.</p>
+          <p>Information regarding the structural links is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
+        </description>
+      </requirement>
+    </structLink>
+    <behaviorSec ID="behaviorSecElement">
+      <requirement REQLEVEL="MAY" ID="REF_METS_2">
+        <description>
+          <head>behaviorSec</head>
+          <p xmlns="http://www.w3.org/1999/xhtml">Section not defined or used in CSIP, additional own uses may occur.</p>
+          <p xmlns="http://www.w3.org/1999/xhtml">Information regarding the behavior section is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
+        </description>
+      </requirement>
+    </behaviorSec>
+  </structural_requirements>
+  <technical_requirements>
+    <content_files>
+      <requirement>
+        <description>
+          <p xmlns="http://www.w3.org/1999/xhtml">Requirements not stated in CITS 3D PM</p>
+        </description>
+      </requirement>
+    </content_files>
+    <behavior_files>
+      <requirement>
+        <description>
+          <p xmlns="http://www.w3.org/1999/xhtml">Requirements not stated in CITS 3D PM</p>
+        </description>
+      </requirement>
+    </behavior_files>
+    <metadata_files>
+      <requirement>
+        <description>
+          <p xmlns="http://www.w3.org/1999/xhtml">Requirements not stated in CITS 3D PM</p>
+        </description>
+      </requirement>
+    </metadata_files>
+  </technical_requirements>
+  <tool>
+    <note>
+      <p xmlns="http://www.w3.org/1999/xhtml">Currently no tool</p>
+    </note>
+  </tool>
+  <Example ID="metsRootElementExample" LABEL="METS example of root METS element for an IP following the CITS 3D PM">
+    <mets:mets xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd             http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd             https://DILCIS.eu/XML/METS/CSIPExtensionMETS              https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd              https://DILCIS.eu/XML/METS/SIPExtensionMETS              https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS" OBJID="Product Model Package" TYPE="OTHER" csip:OTHERTYPE="Product Model Data" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0 " LABEL="Product Model Data from Landivisiau Engineering SARL" PROFILE="https://cits3dpm.dilcis.eu/profile/E-ARK-3dpm-ROOT.xml"></mets:mets>
+  </Example>
+  <Example ID="metsHdrElementExample" LABEL="METS example of root METS Header with submission agreements for an eHealth1 IP.">
+    <mets:metsHdr CREATEDATE="2024-04-24T14:37:49.602+01:00" LASTMODDATE="2024-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" csip:OAISPACKAGETYPE="SIP" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:mets="http://www.loc.gov/METS/">
+      <mets:altRecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.le.fr/dnr331-1144-2011/20120711/</mets:altRecordID>
+      <mets:altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">http://submissionagreement.le.fr/dnr330-1122-2009/20110613/</mets:altRecordID>
+      <mets:altRecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altRecordID>
+      <mets:altRecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altRecordID>
+      <mets:agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
+        <mets:name>product model sip software</mets:name>
+        <mets:note csip:NOTETYPE="SOFTWARE VERSION">version 1.1</mets:note>
+      </mets:agent>
+      <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+        <mets:name>Lanivisiau Engineering</mets:name>
+        <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:89101112 </mets:note>
+      </mets:agent>
+      <mets:agent ROLE="CREATOR" TYPE="INDIVIDUAL">
+        <mets:name>Tanguy Mesguen</mets:name>
+        <mets:note>Phone: 33 6 12 34 56, Email: tanguy.mesguen@landi.mail</mets:note>
+      </mets:agent>
+      <mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
+        <mets:name>Landivisiau Engineering</mets:name>
+        <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
+      </mets:agent>
+    </mets:metsHdr>
+  </Example>
+  <Example ID="dmdSecExample" LABEL="METS example of Root METS dmdSec following CITS 3D PM with reference to EAD metadata file">
+    <mets:dmdSec ID="dmd-ead-file" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT" xmlns:mets="http://www.loc.gov/METS/">
+      <mets:mdRef LOCTYPE="URL" xlink:href="metadata/descriptive/ead.xml" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="643" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="66EEDDF0A22EF57078694B67CA45DF301034556D6CB493531356C4FFE92AB6B1" CHECKSUMTYPE="SHA-256" />
+    </mets:dmdSec>
+  </Example>
+  <Example ID="amdSecExample" LABEL="METS example of Root METS amdSec for an IP following CITS 3D PM">
+    <mets:amdSec xmlns:mets="http://www.loc.gov/METS/">
+      <mets:digiprovMD ID="digiprov-premis-file1" CREATED="2018-04-24T15:27:45.702+01:00" STATUS="CURRENT">
+        <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis1.xml" xlink:type="simple" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="1211" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="8aa278038dbad54bbf142e7d72b493e2598a94946ea1304dc82a79c6b4bac3d5&#xD;&#xA;" CHECKSUMTYPE="SHA-256" xmlns:xlink="http://www.w3.org/1999/xlink" />
+      </mets:digiprovMD>
+      <mets:rightsMD ID="rights-premis-file1" STATUS="CURRENT">
+        <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis2.xml" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="563" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="66EEDDF0A22EF57078694B67CA45DF301034556D6CB493531356C4FFE92AB6B1" CHECKSUMTYPE="SHA-256" />
+      </mets:rightsMD>
+      <mets:rightsMD ID="rights-premis-file2" STATUS="CURRENT">
+        <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis3.xml" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="645" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="66EEDDF0A22EF57078694B67CA45DF301034556D6CB493531356C4FFE92AB6B1" CHECKSUMTYPE="SHA-256" />
+      </mets:rightsMD>
+    </mets:amdSec>
+  </Example>
+  <Example ID="fileSecExample" LABEL="METS example of Root METS fileSec following CITS 3D PM with file information.">
+    <mets:fileSec ID="filesec-example" xmlns:mets="http://www.loc.gov/METS/">
+      <mets:fileGrp ID="filegrp-documentation-authentication" USE="Authentication Documentation">
+        <mets:file ID="file-data-quality-rules" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessing.document" SIZE="43445212" CREATED="2023-08-15T12:08:15.432+01:00" CHECKSUM="160D71F56C2CE685CE7FBD679076FD76B3C67EE9AB5062F5EF5C99AE39C1F43B" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/dataquality1.docx" />
+        </mets:file>
+        <mets:file ID="file-documentation-validation-properties-rules-data" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="31462826" CREATED="2023-08-15T14:44:45.432+01:00" CHECKSUM="0FE9683451D0390BCDEF19CE10CFD287A2D944B6A33D246681FEF27F44FFAF1D" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/valpropsrulesdata1.docx" />
+        </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp ID="filegrp-documentation-other" USE="Other Documentation">
+        <mets:file ID="file-submission-agreement" MIMETYPE="application/pdf" SIZE="21464778" CREATED="2024-08-15T12:08:15.432+01:00" CHECKSUM="0FE9683451D0390BCDEF19CE10CFD287A2D944B6A33D246681FEF27F44FFAF1D" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/other/subagreement.pdf" />
+        </mets:file>
+        <mets:file ID="file-electronic-signature-validation" MIMETYPE="application/pdf" SIZE="3162826" CREATED="2024-08-15T14:44:45.432+01:00" CHECKSUM="160D71F56C2CE685CE7FBD679076FD76B3C67EE9AB5062F5EF5C99AE39C1F43B" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/other/signaturevalidation.pdf" />
+        </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp ID="filegrp-schemas" USE="Schemas">
+        <mets:file ID="file-ptr-schema1" MIMETYPE="text/xsd" SIZE="123917" CREATED="2021-04-24T14:37:49.617+01:00" CHECKSUM="4073D09CA1BAE023D5A7E2010819BF0E8A8EB3C015444D0673733630DE08461C" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/ead.xsd" />
+        </mets:file>
+        <mets:file ID="file-ptr-schema2" MIMETYPE="application/xml" SIZE="6814" CREATED="2015-12-04T09:59:45" CHECKSUM="B565CA93CD86950503F233A7906E4DB709088BA42B9D109D4A8D6F183799603F" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="schemas/METS.xsd" xlink:type="simple" LOCTYPE="URL" />
+        </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" ID="filegrp-representation-original-product-model" USE="representations/original-product-model" ADMD="digiprov-pm-file1 rights-pm-file1" DMDID="dmd-ead-file" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0">
+        <mets:file ID="file-ptr-repmets1" MIMETYPE="xml" SIZE="1338744" CREATED="2024-04-24T14:33:23.617+01:00" CHECKSUM="B1CF59678A21C2805370536AB1097735D7E9F3FDDDCAE3757426ED85F6350A48" CHECKSUMTYPE="SHA-256">
+          <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/original-product-model/mets.xml" xmlns:xlink="http://www.w3.org/1999/xlink" />
+        </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp ID="filegrp-representation-step-model" USE="representations/step-product-model" ADMD="digiprov-pm-file1 rights-pm-file2" DMDID="dmd-ead-file" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS">
+        <mets:file ID="file-ptr-repmets2" MIMETYPE="xml" SIZE="1338744" CREATED="2018-04-24T14:33:23.617+01:00" CHECKSUM="B1CF59678A21C2805370536AB1097735D7E9F3FDDDCAE3757426ED85F6350A48" CHECKSUMTYPE="SHA-256">
+          <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/step-product-model/mets.xml" xmlns:xlink="http://www.w3.org/1999/xlink" />
+        </mets:file>
+      </mets:fileGrp>
+    </mets:fileSec>
+  </Example>
+  <Example ID="struct-map-example" LABEL="METS root example of the mandatory structural map including representations for eHealth1">
+    <mets:structMap ID="struct-map-example" TYPE="PHYSICAL" LABEL="CSIP" xmlns:mets="http://www.loc.gov/METS/">
+      <mets:div ID="struct-map-example-div" LABEL="cits-3dpm-example">
+        <mets:div ID="struct-map-metadata-div" LABEL="Metadata" DMDID="dmd-ead-file" ADMD="digiprov-premis-file1 rights-premis-file1 rights-premis-file1" />
+        <mets:div ID="struct-map-documentation-div" LABEL="Documentation">
+          <mets:div ID="structmap-documentation-authentication-div" LABEL="Documentation">
+            <mets:fileptr FILEID="filegrp-documentation-authentication" />
+          </mets:div>
+          <mets:div ID="structmap-documentation-other-div" LABEL="Documentation">
+            <mets:fileptr FILEID="filegrp-documentation-other" />
+          </mets:div>
+        </mets:div>
+        <mets:div ID="struct-map-schemas-div" LABEL="Schemas">
+          <mets:fptr FILEID="filegrp-schemas" />
+        </mets:div>
+        <mets:div ID="struct-map-reps-sub-div1" LABEL="Representations/original-product-model">
+          <mets:mptr LOCTYPE="URL" xlink:type="simple" xlink:href="representations/original-product-model/METS.xml" xlink:title="file-grp-rep-original-product-model" xmlns:xlink="http://www.w3.org/1999/xlink" />
+        </mets:div>
+        <mets:div ID="struct-map-reps-sub-div2" LABEL="Representations/derived-product-model">
+          <mets:mptr LOCTYPE="URL" xlink:type="simple" xlink:href="representations/derived-product-model/METS.xml" xlink:title="file-grp-rep-derived-product-model" xmlns:xlink="http://www.w3.org/1999/xlink" />
+        </mets:div>
+      </mets:div>
+    </mets:structMap>
+  </Example>
+  <Appendix NUMBER="1" LABEL="Example of a whole METS document describing a submission information package following CITS 3D PM (cits-3dpm_v1_0).">
+    <mets:mets xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd             http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd             https://DILCIS.eu/XML/METS/CSIPExtensionMETS              https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd              https://DILCIS.eu/XML/METS/SIPExtensionMETS              https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS" OBJID="Product_Model_Package" TYPE="OTHER" csip:OTHERTYPE="Product Model Data" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" LABEL="Product Model Data from Landivisiau Engineering SARL" PROFILE="https://cits3dpm.dilcis.eu/profile/E-ARK-eHealth1-ROOT.xml"></mets:mets>
+    <mets:metsHdr CREATEDATE="2024-04-24T14:37:49.602+01:00" LASTMODDATE="2024-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" csip:OAISPACKAGETYPE="SIP" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:mets="http://www.loc.gov/METS/">
+      <mets:altRecordID TYPE="SUBMISSIONAGREEMENT">http://submissionagreement.le.fr/dnr331-1144-2011/20120711/</mets:altRecordID>
+      <mets:altRecordID TYPE="PREVIOUSSUBMISSIONAGREEMENT">http://submissionagreement.le.fr/dnr330-1122-2009/20110613/</mets:altRecordID>
+      <mets:altRecordID TYPE="REFERENCECODE">SE/RA/123456/24/P</mets:altRecordID>
+      <mets:altRecordID TYPE="PREVIOUSREFERENCECODE">SE/FM/123/123.1/123.1.3</mets:altRecordID>
+      <mets:agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
+        <mets:name>product model sip software</mets:name>
+        <mets:note csip:NOTETYPE="SOFTWARE VERSION">version 1.1</mets:note>
+      </mets:agent>
+      <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+        <mets:name>Lanivisiau Engineering</mets:name>
+        <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:89101112 </mets:note>
+      </mets:agent>
+      <mets:agent ROLE="CREATOR" TYPE="INDIVIDUAL">
+        <mets:name>Tanguy Mesguen</mets:name>
+        <mets:note>Phone: 33 6 12 34 56, Email: tanguy.mesguen@landi.mail</mets:note>
+      </mets:agent>
+      <mets:agent ROLE="PRESERVATION" TYPE="ORGANIZATION">
+        <mets:name>Landivisiau Engineering</mets:name>
+        <mets:note csip:NOTETYPE="IDENTIFICATIONCODE">ID:1234567</mets:note>
+      </mets:agent>
+    </mets:metsHdr>
+    <mets:dmdSec ID="dmd-ead-file1" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT">
+      <mets:mdRef LOCTYPE="URL" xlink:href="metadata/descriptive/ead1.xml" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="643" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="66EEDDF0A22EF57078694B67CA45DF301034556D6CB493531356C4FFE92AB6B1" CHECKSUMTYPE="SHA-256" />
+    </mets:dmdSec>
+    <mets:amdSec>
+      <mets:digiprovMD ID="digiprov-premis-file1" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT">
+        <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis1.xml" xlink:type="simple" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="1211" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="8aa278038dbad54bbf142e7d72b493e2598a94946ea1304dc82a79c6b4bac3d5&#xD;&#xA;" CHECKSUMTYPE="SHA-256" xmlns:xlink="http://www.w3.org/1999/xlink" />
+      </mets:digiprovMD>
+      <mets:rightsMD ID="rights-premis-file1" STATUS="CURRENT">
+        <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis2.xml" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="563" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="66EEDDF0A22EF57078694B67CA45DF301034556D6CB493531356C4FFE92AB6B1" CHECKSUMTYPE="SHA-256" />
+      </mets:rightsMD>
+      <mets:rightsMD ID="rights-premis-file2" STATUS="CURRENT">
+        <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis3.xml" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="645" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="66EEDDF0A22EF57078694B67CA45DF301034556D6CB493531356C4FFE92AB6B1" CHECKSUMTYPE="SHA-256" />
+      </mets:rightsMD>
+    </mets:amdSec>
+    <mets:fileSec ID="filesec-example">
+      <mets:fileGrp ID="filegrp-documentation-authentication" USE="Documentation">
+        <!--Documentation is grouped in one or more fileGrp with the use being the path to the documentation-->
+        <!--This documentation is for the entire package, the representations documenation  is described in the represenattion mets.-->
+        <!--Digital provenance metadata is referenced for each file using the ADMID attribute.-->
+        <mets:file ID="file-data-quality-rules" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessing.document" SIZE="43445212" CREATED="2023-08-15T12:08:15.432+01:00" CHECKSUM="160D71F56C2CE685CE7FBD679076FD76B3C67EE9AB5062F5EF5C99AE39C1F43B" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/dataquality1.docx" />
+        </mets:file>
+        <mets:file ID="file-documentation-validation-properties-rules-data" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="31462826" CREATED="2023-08-15T14:44:45.432+01:00" CHECKSUM="0FE9683451D0390BCDEF19CE10CFD287A2D944B6A33D246681FEF27F44FFAF1D" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/valpropsrulesdata1.docx" />
+        </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp ID="filegrp-documentation-other" USE="Documentation">
+        <mets:file ID="file-submission-agreement" MIMETYPE="application/pdf" SIZE="21464778" CREATED="2024-08-15T12:08:15.432+01:00" CHECKSUM="0FE9683451D0390BCDEF19CE10CFD287A2D944B6A33D246681FEF27F44FFAF1D" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/other/subagreement.pdf" />
+        </mets:file>
+        <mets:file ID="file-electronic-signature-validation" MIMETYPE="application/pdf" SIZE="3162826" CREATED="2024-08-15T14:44:45.432+01:00" CHECKSUM="160D71F56C2CE685CE7FBD679076FD76B3C67EE9AB5062F5EF5C99AE39C1F43B" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/other/signaturevalidation.pdf" />
+        </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp ID="filegrp-schemas" USE="Schemas">
+        <!--Schema documents are grouped in one or more fileGrp with the use being the path to the documents.-->
+        <!--Digital provenance metadata is referenced for each file using the ADMID attribute.-->
+        <mets:file ID="file-ptr-schema1" MIMETYPE="text/xsd" SIZE="123917" CREATED="2021-04-24T14:37:49.617+01:00" CHECKSUM="4073D09CA1BAE023D5A7E2010819BF0E8A8EB3C015444D0673733630DE08461C" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="schemas/ead.xsd" />
+        </mets:file>
+        <mets:file ID="file-ptr-schema2" MIMETYPE="application/xml" SIZE="6814" CREATED="2015-12-04T09:59:45" CHECKSUM="B565CA93CD86950503F233A7906E4DB709088BA42B9D109D4A8D6F183799603F" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="schemas/METS.xsd" xlink:type="simple" LOCTYPE="URL" />
+        </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" ID="filegrp-representation-original-product-model" USE="representations/original-product-model" ADMD="digiprov-pm-file1 rights-pm-file1" DMDID="dmd-ead-file" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0">
+        <!--Transferred data is stored in a folder within a representation, the filepath in the USE attribute-->
+        <!--Descriptive, digital provenance and rights metadata can be referenced at file group level-->
+        <mets:file ID="file-ptr-repmets1" MIMETYPE="xml" SIZE="1338744" CREATED="2024-04-24T14:33:23.617+01:00" CHECKSUM="B1CF59678A21C2805370536AB1097735D7E9F3FDDDCAE3757426ED85F6350A48" CHECKSUMTYPE="SHA-256">
+          <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/original-product-model/mets.xml" xmlns:xlink="http://www.w3.org/1999/xlink" />
+        </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp ID="filegrp-representation-step-model" USE="representations/step-product-model" ADMD="digiprov-pm-file1 rights-pm-file2" DMDID="dmd-ead-file" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS">
+        <!--Transferred data is stored in a folder within a representation, the filepath in the USE attribute-->
+        <!--Descriptive, digital provenance and rights metadata can be referenced at file group level-->
+        <mets:file ID="file-ptr-repmets2" MIMETYPE="xml" SIZE="1338744" CREATED="2018-04-24T14:33:23.617+01:00" CHECKSUM="B1CF59678A21C2805370536AB1097735D7E9F3FDDDCAE3757426ED85F6350A48" CHECKSUMTYPE="SHA-256">
+          <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="representations/step-product-model/mets.xml" xmlns:xlink="http://www.w3.org/1999/xlink" />
+        </mets:file>
+      </mets:fileGrp>
+    </mets:fileSec>
+    <mets:structMap ID="struct-map-product-model-root" TYPE="PHYSICAL" LABEL="CSIP">
+      <mets:div ID="struct-map-example-div" LABEL="cits-3dpm-example">
+        <mets:div ID="struct-map-metadata-div" LABEL="Metadata" DMDID="dmd-ead-file" ADMD="digiprov-premis-file1 rights-premis-file1 rights-premis-file1" />
+        <mets:div ID="struct-map-documentation-div" LABEL="Documentation">
+          <mets:div ID="structmap-documentation-authentication-div" LABEL="Documentation">
+            <mets:fileptr FILEID="filegrp-documentation-authentication" />
+          </mets:div>
+          <mets:div ID="structmap-documentation-other-div" LABEL="Documentation">
+            <mets:fileptr FILEID="filegrp-documentation-other" />
+          </mets:div>
+        </mets:div>
+        <mets:div ID="struct-map-schemas-div" LABEL="Schemas">
+          <mets:fptr FILEID="filegrp-schemas" />
+        </mets:div>
+        <mets:div ID="struct-map-reps-sub-div1" LABEL="Representations/original-product-model">
+          <mets:mptr LOCTYPE="URL" xlink:type="simple" xlink:href="representations/original-product-model/METS.xml" xlink:title="file-grp-rep-original-product-model" xmlns:xlink="http://www.w3.org/1999/xlink" />
+        </mets:div>
+        <mets:div ID="struct-map-reps-sub-div2" LABEL="Representations/derived-product-model">
+          <mets:mptr LOCTYPE="URL" xlink:type="simple" xlink:href="representations/derived-product-model/METS.xml" xlink:title="file-grp-rep-derived-product-model" xmlns:xlink="http://www.w3.org/1999/xlink" />
+        </mets:div>
+      </mets:div>
+    </mets:structMap>
+  </Appendix>
+</METS_Profile>
