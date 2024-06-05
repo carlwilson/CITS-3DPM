@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="DILCISVocabularies.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<Vocabularies xmlns="https://DILCIS.eu/XML/Vocabularies/IP">
+    <Vocabulary Name="Vocabulary3DPM">
+        <Information>
+            <p>Vocabulary derived from E-ARK</p>
+            <p>The terms are used for the CITS 3DPM</p>
+        </Information>
+        <Entry>
+            <Term lang="en">Authentication Documentation</Term>
+            <Definition>Documentation that supports Authentication processes in the Validation or Verification of the content data such as process documents, Validation Properties Rules Data or Data Quality Rules.</Definition>
+        </Entry>
+        <Entry>
+            <Term lang="en">Other Documentation</Term>
+            <Definition>Documentation other than Authentication Documentation included in the root or representation documentation folders. </Definition>
+        </Entry>
+    <Vocabulary Name="VocabularyFileGrpAndStructMapDivisionLabel">
+       <Information>
+           <p>Vocabulary derived from E-ARK</p>
+       </Information>
+       <Entry>
+           <Term lang="en">Authentication Documentation</Term>
+           <Definition>The file group or structural division contains Authentication Documentation</Definition>
+        </Entry>
+        <Entry>
+            <Term lang="en">Other Documentation</Term>
+            <Definition>The file group or structural division contains Other Documentation</Definition>
+        </Entry>
+    </Vocabulary>
+</Vocabularies>  
