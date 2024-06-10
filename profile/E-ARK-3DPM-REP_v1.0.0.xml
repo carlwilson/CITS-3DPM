@@ -2,9 +2,9 @@
 <!-- 2024-04-22 Draft of E-ARK 3D PM REP METS Profile 1.0 -->
 <METS_Profile xmlns="http://www.loc.gov/METS_Profile/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mets="http://www.loc.gov/METS/" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/METS_Profile/v2 http://www.loc.gov/standards/mets/profile_docs/mets.profile.v2-0.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd" STATUS="provisional" REGISTRATION="unregistered" ID="3DPMREPV1.0.0">
   <URI LOCTYPE="URL" ASSIGNEDBY="local">https://cits3DPM.dilcis.eu/profile/E-ARK-3DPM-ROOT.xml</URI>
-  <title>E-ARK 3DPM representation METS Profile 1.0 (cits3dpm_v1_0)</title>
-  <abstract>This is the profile for a representation METS following E-ARK 3D PM. It's an extension of the E-ARK CSIP profile.</abstract>
-  <date>2024-04-16T12:00:00</date>
+  <title>E-ARK 3DPM representation METS Profile</title>
+  <abstract>This is the profile for a representation METS following E-ARK 3DPM. It is an extension of the E-ARK CSIP profile.</abstract>
+  <date>2024-06-07T12:00:00</date>
   <contact>
     <institution>DILCIS Board</institution>
     <address>http://dilcis.eu/</address>
@@ -39,24 +39,6 @@
     <p xmlns="http://www.w3.org/1999/xhtml">The filepath must be decoded consistently throughout all file references within the information package.</p>
   </description_rules>
   <controlled_vocabularies>
-    <vocabulary ID="VocabularyaltrecordIDTYPE">
-      <name>Alternative record ID's</name>
-      <maintenance_agency>DILCIS Board</maintenance_agency>
-      <URI>http://earksip.dilcis.eu/schema/SIPVocabularyRecordIDType.xml</URI>
-      <context>Used in `altrecordID/@TYPE`</context>
-      <description>
-        <p xmlns="http://www.w3.org/1999/xhtml">Describes the type of the alternative record ID.</p>
-      </description>
-    </vocabulary>
-    <vocabulary ID="VocabularyNoteType">
-      <name>Note type</name>
-      <maintenance_agency>DILCIS Board</maintenance_agency>
-      <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyNoteType.xml</URI>
-      <context>Used in `@csip:NOTETYPE`</context>
-      <description>
-        <p xmlns="http://www.w3.org/1999/xhtml">Describes the type of a note for an agent.</p>
-      </description>
-    </vocabulary>
     <vocabulary ID="VocabularyContentInformationTypeSpecification">
       <name>Content information type specification</name>
       <maintenance_agency>DILCIS Board</maintenance_agency>
@@ -66,29 +48,20 @@
         <p xmlns="http://www.w3.org/1999/xhtml">Lists the names of specific E-ARK content information type specifications supported or maintained in this METS profile.</p>
       </description>
     </vocabulary>
-    <vocabulary ID="VocabularyContentCategory">
-      <name>Content Category</name>
+    <vocabulary ID="Vocabulary3DPM">
+      <name>Content category and folder definitions in 3DPM</name>
       <maintenance_agency>DILCIS Board</maintenance_agency>
-      <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyContentCategory.xml</URI>
-      <context>Values for `mets/@type`</context>
+      <URI>https://citsehealth1.dilcis.eu/schema/Vocabulary3DPM.xml</URI>
+      <context>Predefined values for content category and documentation types</context>
       <description>
-        <p xmlns="http://www.w3.org/1999/xhtml">Declares the categorical classification of package content.</p>
-      </description>
-    </vocabulary>
-    <vocabulary ID="VocabularyFileGrpAndStructMapDivisionLabel">
-      <name>File group names</name>
-      <maintenance_agency>DILCIS Board</maintenance_agency>
-      <URI>http://earkcsip.dilcis.eu/schema/CSIPVocabularyFileGrpAndStructMapDivisionLabel.xml</URI>
-      <context>Values for `fileGrp/@USE`</context>
-      <description>
-        <p xmlns="http://www.w3.org/1999/xhtml">Describes the uses of the file group `&lt;fileGrp&gt;` that are supported by the profile.</p>
-        <p xmlns="http://www.w3.org/1999/xhtml">Own names should be placed in an own extending vocabulary.</p>
+        <p xmlns="http://www.w3.org/1999/xhtml">Describes the extra terms supported by this profile.</p>
+        <p xmlns="http://www.w3.org/1999/xhtml">Own names should be placed in an own extended vocabulary.</p>
       </description>
     </vocabulary>
   </controlled_vocabularies>
   <structural_requirements>
     <metsRootElement ID="metsRootElement">
-      <requirement ID="3DPM30" REQLEVEL="MUST" EXAMPLES="metsRepElementExample">
+      <requirement ID="3DPM30" REQLEVEL="MUST" EXAMPLES="metsRepRootElementExample">
         <description>
           <head>Representation identifier</head>
           <p>The mets/@OBJID attribute is mandatory. Its value is a string identifier for the METS document. For a representation level METS document, this value records the name of the representation (i.e. the name of the top level representation folder)</p>
@@ -97,7 +70,7 @@
             <dd>mets/@PROFILE</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:E-ARK-CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#CSIP1</dd>
             <dt>since</dt>
             <dd>v1.0..0</dd>
@@ -113,7 +86,7 @@
             <dd>mets/@TYPE</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#CSIP2</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -129,7 +102,7 @@
             <dd>mets[@TYPE='OTHER']/@csip:OTHERTYPE</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#CSIP3</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -145,8 +118,8 @@
             <dd>mets/@csip:CONTENTINFORMATIONTYPE</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
-            <dd>https://earkcsip.dilcis.eu/#CSIP6</dd>
+            <dt>REF:CSIP-v2.2.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#CSIP4</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
           </dl>
@@ -161,7 +134,7 @@
             <dd>mets/@PROFILE</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#CSIP6</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -183,7 +156,7 @@
         <description>
           <head>Descriptive metadata</head>
           <p>
-The SIP dmdSec element should comply with
+The dmdSec element should comply with
  <a href="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdSec">dmdSec requirements in the CSIP profile</a></p>
         </description>
       </requirement>
@@ -198,7 +171,7 @@ The SIP dmdSec element should comply with
             <dd>mets/amdSec</dd>
             <dt>Cardinality</dt>
             <dd>0..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#csip31</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -208,16 +181,18 @@ The SIP dmdSec element should comply with
       <requirement ID="3DPM36" REQLEVEL="MUST" EXAMPLES="amdSecExample">
         <description>
           <head>Digital provenance metadata</head>
-          <p>PREMIS MUST be used to record information about preservation (specifically including recording of data Validation events, Verification events and Electronic Signatures). The use of PREMIS SHOULD follow recommendations in the CITS PREMIS.  </p>
+          <p>PREMIS MUST be used to record information about preservation events (specifically including recording of data Validation events, Verification events and Electronic Signatures). The use of PREMIS SHOULD follow recommendations in the CITS PREMIS.  </p>
           <dl>
             <dt>METS xpath</dt>
             <dd>mets/amdSec/digiprovMD</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#csip31</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
+            <dt>dependsOn</dt>
+            <dd>3DPM35</dd>
           </dl>
         </description>
       </requirement>
@@ -230,10 +205,12 @@ The SIP dmdSec element should comply with
             <dd>mets/amdSec/digiprovMD/mdRef</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#csip31</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
+            <dt>dependsOn</dt>
+            <dd>3DPM35</dd>
           </dl>
         </description>
       </requirement>
@@ -249,7 +226,7 @@ The SIP dmdSec element should comply with
             <dd>mets/fileSec</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#CSIP58</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -266,7 +243,7 @@ The SIP dmdSec element should comply with
             <dd>mets/fileSec/fileGrp/@ADMID</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#61</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -282,7 +259,7 @@ The SIP dmdSec element should comply with
             <dd>mets/fileSec/fileGrp[@csip:CONTENTINFORMATIONTYPE='cits3dpm_v1_0 ']</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#CSIP62</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -298,7 +275,7 @@ The SIP dmdSec element should comply with
             <dd>mets/fileSec/fileGrp/@ADMID</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#74</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -456,7 +433,7 @@ The SIP dmdSec element should comply with
             <dd>mets/structMap[@LABEL='CSIP']/div/div/</dd>
             <dt>Cardinality</dt>
             <dd>1..n</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earscip.dilcis.eu/#csip101</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -469,10 +446,10 @@ The SIP dmdSec element should comply with
           <p>Mandatory, 'xml:id' identifier must be unique within the package.</p>
           <dl>
             <dt>METS XPath</dt>
-            <dd>mets/structMap[@LABEL='eHealth1']/div/div/@ID</dd>
+            <dd>mets/structMap[@LABEL='CSIP']/div/div/@ID</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#CSIP102</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -488,7 +465,7 @@ The SIP dmdSec element should comply with
             <dd>mets/structMap[@LABEL='CSIP']/div/div/[@LABEL='DATA']</dd>
             <dt>Cardinality</dt>
             <dd>1..1</dd>
-            <dt>REF:CSIP-v2.1.0</dt>
+            <dt>REF:CSIP-v2.2.0</dt>
             <dd>https://earkcsip.dilcis.eu/#CSIP103</dd>
             <dt>since</dt>
             <dd>v1.0.0</dd>
@@ -542,20 +519,20 @@ Information regarding the behavior section is found in the
       </requirement>
     </metadata_files>
   </technical_requirements>
+  <Example ID="amdSecExample" LABEL="METS example of representation METS amdSec">
+    <mets:amdSec>
+      <mets:digiprovMD ID="digiprov-premis-file3" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT">
+        <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis3.xml" xlink:type="simple" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="1211" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="8aa278038dbad54bbf142e7d72b493e2598a94946ea1304dc82a79c6b4bac3d5 " CHECKSUMTYPE="SHA-256" />
+      </mets:digiprovMD>
+    </mets:amdSec>
+  </Example>
   <tool>
     <note>
       <p>Currently no tool</p>
     </note>
   </tool>
-  <Example ID="metsRepElementExample" LABEL="METS example of representation METS element for an IP following the CITS 3DPM">
-    <mets:mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS" OBJID="Product Model Representation" TYPE="OTHER" csip:OTHERTYPE="Product Model Data" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0 " PROFILE="https://cits3dpm.dilcis.eu/profile/E-ARK-3dpm-REP.xml" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd" />
-  </Example>
-  <Example ID="amdSecExample" LABEL="METS example of representation METS amdSec">
-    <mets:amdSec>
-      <mets:digiprovMD ID="digiprov-premis-file-1" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT">
-        <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis1.xml" xlink:type="simple" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="1211" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="8aa278038dbad54bbf142e7d72b493e2598a94946ea1304dc82a79c6b4bac3d5 " CHECKSUMTYPE="SHA-256" />
-      </mets:digiprovMD>
-    </mets:amdSec>
+  <Example ID="metsRepRootElementExample" LABEL="METS example of representation Root METS element for an IP following the CITS 3DPM">
+    <mets:mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS" OBJID="original-product-model" TYPE="OTHER" csip:OTHERTYPE="Product Model Data" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0 " PROFILE="https://cits3dpm.dilcis.eu/profile/E-ARK-3dpm-REP.xml" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd" />
   </Example>
   <Example ID="fileSecExample" LABEL="METS representation mets example for an IP following CITS 3DPM with administrative metadata at group level.">
     <mets:fileSec ID="filesec-example">
@@ -598,8 +575,8 @@ Information regarding the behavior section is found in the
       </mets:div>
     </mets:structMap>
   </Example>
-  <Appendix NUMBER="1" LABEL="Example of a whole METS document describing a representation  following CITS 3D PM (cits3dpm_v1_0).">
-    <mets:mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd" OBJID="Product_Model_Submission" TYPE="OTHER" csip:OTHERTYPE="Product Model Data" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" PROFILE="https://cits3dpm.dilcis.eu/profile/E-ARK-eHealth1-ROOT.xml" />
+  <Appendix NUMBER="1" LABEL="Example of a whole METS document describing a representation  following CITS 3DPM (cits3dpm_v1_0).">
+    <mets:mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:sip="https://DILCIS.eu/XML/METS/SIPExtensionMETS" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/mets/xlink.xsd https://DILCIS.eu/XML/METS/CSIPExtensionMETS https://earkcsip.dilcis.eu/schema/DILCISExtensionMETS.xsd https://DILCIS.eu/XML/METS/SIPExtensionMETS https://earksip.dilcis.eu/schema/DILCISExtensionSIPMETS.xsd" OBJID="original-product-model" TYPE="OTHER" csip:OTHERTYPE="Product Model Data" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" PROFILE="https://cits3dpm.dilcis.eu/profile/E-ARK-eHealth1-REP.xml" />
     <mets:metsHdr CREATEDATE="2024-04-24T14:37:49.602+01:00" LASTMODDATE="2024-04-24T14:37:49.602+01:00" RECORDSTATUS="NEW" csip:OAISPACKAGETYPE="SIP" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS" xmlns:mets="http://www.loc.gov/METS/">
       <mets:agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="SOFTWARE">
         <mets:name>product model sip software</mets:name>
@@ -622,11 +599,11 @@ Information regarding the behavior section is found in the
       <mets:mdRef LOCTYPE="URL" xlink:href="metadata/descriptive/ead2.xml" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="643" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="66EEDDF0A22EF57078694B67CA45DF301034556D6CB493531356C4FFE92AB6B1" CHECKSUMTYPE="SHA-256" />
     </mets:dmdSec>
     <mets:amdSec>
-      <mets:digiprovMD ID="digiprov-premis-file2" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT">
+      <mets:digiprovMD ID="digiprov-premis-file3" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT">
         <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis2.xml" xlink:type="simple" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="1211" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="8aa278038dbad54bbf142e7d72b493e2598a94946ea1304dc82a79c6b4bac3d5 " CHECKSUMTYPE="SHA-256" />
       </mets:digiprovMD>
     </mets:amdSec>
-    <mets:fileSec ID="filesec-example-1" xmlns:mets="http://www.loc.gov/METS/">
+    <mets:fileSec ID="filesecExample" xmlns:mets="http://www.loc.gov/METS/">
       <mets:fileGrp ID="filegrp-documentation-authentication" USE="Documentation">
         <mets:file ID="file-validation-properties-file1" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessing.document" SIZE="43445212" CREATED="2023-08-15T12:08:15.432+01:00" CHECKSUM="160D71F56C2CE685CE7FBD679076FD76B3C67EE9AB5062F5EF5C99AE39C1F43B" CHECKSUMTYPE="SHA-256">
           <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/validationprops1.docx" xmlns:xlink="http://www.w3.org/1999/xlink" />
@@ -635,27 +612,25 @@ Information regarding the behavior section is found in the
           <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/verificationrep1.docx" xmlns:xlink="http://www.w3.org/1999/xlink" />
         </mets:file>
       </mets:fileGrp>
-      <mets:fileGrp ID="filegrp-original-product-model" USE="Representations" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" ADMD="digiprov-premis-file-2" DMDID="dmd-ead-file2" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS">
+      <mets:fileGrp ID="filegrp-original-product-model" USE="Representations" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" ADMD="digiprov-premis-file3" DMDID="dmd-ead-file2" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS">
         <mets:file ID="file-original-product-model" MIMETYPE="dwg" SIZE="10338744" CREATED="2018-04-24T14:33:23.617+01:00" CHECKSUM="B1CF59678A21C2805370536AB1097735D7E9F3FDDDCAE3757426ED85F6350A48" CHECKSUMTYPE="SHA-256">
           <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/product1.dwg" xmlns:xlink="http://www.w3.org/1999/xlink" />
         </mets:file>
       </mets:fileGrp>
     </mets:fileSec>
-    <mets:structMap ID="struct-map-product-model-rep" TYPE="PHYSICAL" LABEL="CSIP">
-      <mets:div ID="struct-map-example-div" LABEL="CITS-3dpm-example">
-        <mets:div ID="struct-map-metadata-div" LABEL="Metadata" DMDID="dmd-ead-file2" ADMD="digiprov-premis-file2" />
-        <mets:div ID="struct-map-documentation-div" LABEL="Documentation">
-          <mets:div ID="structmap-documentation-authentication-div" LABEL="Documentation">
-            <mets:fileptr FILEID="filegrp-documentation-authentication" />
-          </mets:div>
-          <mets:div ID="structmap-documentation-other-div" LABEL="Documentation">
-            <mets:fileptr FILEID="filegrp-documentation-other" />
-          </mets:div>
+    <mets:structMap ID="struct-map-original-product-model-rep" TYPE="PHYSICAL" LABEL="CSIP">
+      <mets:div ID="struct-map-data-div" LABEL="Representations">
+        <mets:mptr FILEID="filegrp-original-product-model" />
+      </mets:div>
+      <mets:div ID="struct-map-documentation-div" LABEL="Documentation">
+        <mets:div ID="structmap-documentation-authentication-div" LABEL="Documentation">
+          <mets:fileptr FILEID="filegrp-documentation-authentication" />
         </mets:div>
-        <mets:div ID="struct-map-data-div" LABEL="Representations">
-          <mets:mptr FILEID="filegrp-original-product-model" />
+        <mets:div ID="structmap-documentation-other-div" LABEL="Documentation">
+          <mets:fileptr FILEID="filegrp-documentation-other" />
         </mets:div>
       </mets:div>
+      <mets:div ID="struct-map-metadata-div" LABEL="Metadata" DMDID="dmd-ead-file2" ADMD="digiprov-premis-file2" />
     </mets:structMap>
   </Appendix>
 </METS_Profile>
