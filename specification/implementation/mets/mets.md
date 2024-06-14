@@ -17,9 +17,9 @@ There are no specific requirements in CITS 3D PM for the root METS descriptive m
 ### Root METS administrative metadata section (element amdSec)
 The administrative metadata section contains four sub-sections each used to record different types of metadata for package content: technical metadata (element techMD) records technical metadata; rights metadata (element rightsMD) records intellectual property rights information; source metadata (element sourceMD) records descriptive technical or rights metadata for an analogue source for a digital object; and digital provenance metadata (element digiprovMD) records digital preservation information, e.g. audit information for an object’s lifecycle.
 
-The CSIP (and METS) categorise preservation metadata as administrative metadata, specifically digital provenance metadata (following the avaiable guidelines published by the Library of Congress): (http://www.loc.gov/standards/premis/guidelines2017-premismets.pdf) and hence all preservation metadata should be referenced from a digiprovMD element within the amdSec.
+The CSIP (and METS) categorise preservation metadata as administrative metadata, specifically digital provenance metadata (following the avaiable guidelines published by the Library of Congress): (http://www.loc.gov/standards/premis/guidelines2017-premismets.pdf) and hence all preservation metadata should be referenced from a single or multiple digiprovMD elements within the amdSec.
 
-As detailed Rights information is required by LOTAR for the package then CITS 3D PM recommends the inclusion of a PREMIS file in the metadata/preservation folder containing detailed Rights information as described in 10.3.2 and any digital provenance metadata as described in the CITS Preservation Metadata. 
+Note that CITS PREMIS requires that all PREMIS is referenced from the digiprovMD element, inlcuding PREMIS Rights information and not via a separate rightsMD statement. 
 
 ### Root METS file metadata section (element fileSec)
 The CSIP does not make use of the METS fileSec element mandatory, but it is strongly recommended. In the 3D PM CITS the use of the METS fileSec element at the package level becomes mandatory, such as to reference the METS files within each representation.
