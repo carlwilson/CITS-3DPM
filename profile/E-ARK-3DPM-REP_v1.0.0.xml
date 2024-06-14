@@ -521,7 +521,7 @@ Information regarding the behavior section is found in the
   </technical_requirements>
   <Example ID="amdSecExample" LABEL="METS example of representation METS amdSec">
     <mets:amdSec>
-      <mets:digiprovMD ID="digiprov-premis-file3" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT">
+      <mets:digiprovMD ID="preservation-premis-file3" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT">
         <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis3.xml" xlink:type="simple" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="1211" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="8aa278038dbad54bbf142e7d72b493e2598a94946ea1304dc82a79c6b4bac3d5 " CHECKSUMTYPE="SHA-256" />
       </mets:digiprovMD>
     </mets:amdSec>
@@ -547,7 +547,7 @@ Information regarding the behavior section is found in the
           <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/verificationrep1.docx" />
         </mets:file>
       </mets:fileGrp>
-      <mets:fileGrp ID="filegrp-original-product-model" USE="Representations" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" ADMD="digiprov-premis-file-1">
+      <mets:fileGrp ID="filegrp-original-product-model" USE="Representations" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" ADMD="digiprov-premis-file3">
         <mets:file ID="file-original-product-model" MIMETYPE="dwg" SIZE="10338744" CREATED="2024-04-24T14:33:23.617+01:00" CHECKSUM="B1CF59678A21C2805370536AB1097735D7E9F3FDDDCAE3757426ED85F6350A48" CHECKSUMTYPE="SHA-256">
           <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/product1.dwg" />
         </mets:file>
@@ -599,7 +599,7 @@ Information regarding the behavior section is found in the
       <mets:mdRef LOCTYPE="URL" xlink:href="metadata/descriptive/ead2.xml" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" MDTYPE="EAD" MIMETYPE="application/xml" SIZE="643" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="66EEDDF0A22EF57078694B67CA45DF301034556D6CB493531356C4FFE92AB6B1" CHECKSUMTYPE="SHA-256" />
     </mets:dmdSec>
     <mets:amdSec>
-      <mets:digiprovMD ID="digiprov-premis-file3" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT">
+      <mets:digiprovMD ID="preservation-premis-file3" CREATED="2024-04-24T15:27:45.702+01:00" STATUS="CURRENT">
         <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis2.xml" xlink:type="simple" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="1211" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="8aa278038dbad54bbf142e7d72b493e2598a94946ea1304dc82a79c6b4bac3d5 " CHECKSUMTYPE="SHA-256" />
       </mets:digiprovMD>
     </mets:amdSec>
@@ -612,7 +612,7 @@ Information regarding the behavior section is found in the
           <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/verificationrep1.docx" xmlns:xlink="http://www.w3.org/1999/xlink" />
         </mets:file>
       </mets:fileGrp>
-      <mets:fileGrp ID="filegrp-original-product-model" USE="Representations" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" ADMD="digiprov-premis-file3" DMDID="dmd-ead-file2" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS">
+      <mets:fileGrp ID="filegrp-original-product-model" USE="Representations" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" ADMD="preservation-premis-file3" DMDID="dmd-ead-file2" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS">
         <mets:file ID="file-original-product-model" MIMETYPE="dwg" SIZE="10338744" CREATED="2018-04-24T14:33:23.617+01:00" CHECKSUM="B1CF59678A21C2805370536AB1097735D7E9F3FDDDCAE3757426ED85F6350A48" CHECKSUMTYPE="SHA-256">
           <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/product1.dwg" xmlns:xlink="http://www.w3.org/1999/xlink" />
         </mets:file>
