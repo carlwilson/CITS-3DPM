@@ -61,7 +61,7 @@
   </controlled_vocabularies>
   <structural_requirements>
     <metsRootElement ID="metsRootElement">
-      <requirement ID="3DPM30" REQLEVEL="MUST" EXAMPLES="metsRepRootElementExample">
+      <requirement ID="3DPM32" REQLEVEL="MUST" EXAMPLES="metsRepRootElementExample">
         <description>
           <head>Representation identifier</head>
           <p>The mets/@OBJID attribute is mandatory. Its value is a string identifier for the METS document. For a representation level METS document, this value records the name of the representation (i.e. the name of the top level representation folder)</p>
@@ -77,7 +77,7 @@
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM31" REQLEVEL="MUST" RELATEDMAT="VocabularyContentCategory" EXAMPLES="metsRepElementExample">
+      <requirement ID="3DPM33" REQLEVEL="MUST" RELATEDMAT="VocabularyContentCategory" EXAMPLES="metsRepElementExample">
         <description>
           <head>Content Category</head>
           <p>The `mets/@TYPE` attribute is set to the value "OTHER".</p>
@@ -93,7 +93,7 @@
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM32" REQLEVEL="MUST" RELATEDMAT="VocabularyContentCategory Vocabulary3DPM" EXAMPLES="metsRepElementExample">
+      <requirement ID="3DPM34" REQLEVEL="MUST" RELATEDMAT="VocabularyContentCategory Vocabulary3DPM" EXAMPLES="metsRepElementExample">
         <description>
           <head>Other Content Category</head>
           <p>The `mets/@csip:OTHERTYPE` attribute is set to the value "Product Model Data".</p>
@@ -109,7 +109,7 @@
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM33" REQLEVEL="MUST" RELATEDMAT="VocabularyContentInformationTypeSpecification" EXAMPLES="metsRepElementExample">
+      <requirement ID="3DPM35" REQLEVEL="MUST" RELATEDMAT="VocabularyContentInformationTypeSpecification" EXAMPLES="metsRepElementExample">
         <description>
           <head>Content information type specification</head>
           <p>The `mets/@csip:CONTENTINFORMATIONTYPE` attribute is set to  the value "cits3dpm_v1_0"</p>
@@ -125,7 +125,7 @@
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM34" REQLEVEL="MUST" EXAMPLES="metsRepElementExample">
+      <requirement ID="3DPM36" REQLEVEL="MUST" EXAMPLES="metsRepElementExample">
         <description>
           <head>METS Profile</head>
           <p>The value is set to "https://cits3dpm.dilcis.eu/profile/E-ARK-3dpm-REP.xml".</p>
@@ -162,7 +162,7 @@ The dmdSec element should comply with
       </requirement>
     </dmdSec>
     <amdSec ID="amdSecElement">
-      <requirement ID="3DPM35" REQLEVEL="SHOULD" EXAMPLES="amdSecExample">
+      <requirement ID="3DPM37" REQLEVEL="SHOULD" EXAMPLES="amdSecExample">
         <description>
           <head>Administrative metadata</head>
           <p>Preservation, authentication event and electronic signature metadata SHOULD be described using the administrative metadata section amd element. All administrative metadata is presented in a single amdSec element.</p>
@@ -178,7 +178,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM36" REQLEVEL="MUST" EXAMPLES="amdSecExample">
+      <requirement ID="3DPM38" REQLEVEL="MUST" EXAMPLES="amdSecExample">
         <description>
           <head>Digital provenance metadata</head>
           <p>PREMIS MUST be used to record information about preservation events (specifically including recording of data Validation events, Verification events and Electronic Signatures). The use of PREMIS SHOULD follow recommendations in the CITS PREMIS.  </p>
@@ -196,7 +196,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM37" REQLEVEL="MUST" EXAMPLES="amdSecExample">
+      <requirement ID="3DPM39" REQLEVEL="MUST" EXAMPLES="amdSecExample">
         <description>
           <head>Reference to the document with the digital provenance metadata</head>
           <p>Reference to the digital provenance file stored in the ‘metadata/preservation’ folder of the representation.</p>
@@ -216,7 +216,7 @@ The dmdSec element should comply with
       </requirement>
     </amdSec>
     <fileSec ID="fileSecElement">
-      <requirement ID="3DPM38" REQLEVEL="MUST" EXAMPLES="fileSecExample">
+      <requirement ID="3DPM40" REQLEVEL="MUST" EXAMPLES="fileSecExample">
         <description>
           <head>File section</head>
           <p>The transferred content within the representation is referenced from the file section in different file groups. Only a single representation file section fileSec element MUST be present.</p>
@@ -233,7 +233,39 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM39" REQLEVEL="MUST" EXAMPLES="fileSecExample">
+      <requirement ID="3DPM41" REQLEVEL="MUST" EXAMPLES="fileSecExample">
+        <description>
+          <head>Authentication Documentation file group</head>
+          <p>All Authentication Documentation located in the documentation/authentication folder is placed in one or more file group elements with mets/fileSec/fileGrp/@USE attribute value ‘Authentication Documentation’ taken from the vocabulary.</p>
+          <dl>
+            <dt>METS XPATH</dt>
+            <dd>mets/fileSec/fileGrp/@ADMID</dd>
+            <dt>Cardinality</dt>
+            <dd>1..n</dd>
+            <dt>REF:CSIP-v2.2.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#CSIP60</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM42" REQLEVEL="MUST" EXAMPLES="fileSecExample">
+        <description>
+          <head>Other Documentation file group</head>
+          <p>All Other Documentation located in the documentation/other folder is placed in one or more file group elements with mets/fileSec/fileGrp/@USE attribute value ‘Other Documentation’ taken from the vocabulary.</p>
+          <dl>
+            <dt>METS XPATH</dt>
+            <dd>mets/fileSec/fileGrp/@ADMID</dd>
+            <dt>Cardinality</dt>
+            <dd>1..n</dd>
+            <dt>REF:CSIP-v2.2.0</dt>
+            <dd>https://earkcsip.dilcis.eu/#CSIP60</dd>
+            <dt>since</dt>
+            <dd>v1.0.0</dd>
+          </dl>
+        </description>
+      </requirement>
+      <requirement ID="3DPM43" REQLEVEL="MUST" EXAMPLES="fileSecExample">
         <description>
           <head>Reference to administrative metadata</head>
           <p>If administrative metadata has been provided at file group mets/fileSec/fileGrp level this attribute MUST refer to its administrative metadata section by ID.</p>
@@ -250,7 +282,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM40" REQLEVEL="MUST" RELATEDMAT="VocabularyContentInformationTypeSpecification" EXAMPLES="fileSecExample">
+      <requirement ID="3DPM44" REQLEVEL="MUST" RELATEDMAT="VocabularyContentInformationTypeSpecification" EXAMPLES="fileSecExample">
         <description>
           <head>Content Information Type Specification</head>
           <p>The value of the attribute `mets/fileSec/fileGrp/@csip:CONTENTINFORMATIONTYPE` is set to "cits3dpm_v1_0".</p>
@@ -266,7 +298,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM41" REQLEVEL="MUST" EXAMPLES="fileSecExample">
+      <requirement ID="3DPM45" REQLEVEL="MUST" EXAMPLES="fileSecExample">
         <description>
           <head>Reference to Administrative Metadata</head>
           <p>If administrative metadata has been provided at file level then this attribute MUST refer to its administrative metadata section by ID.</p>
@@ -284,7 +316,7 @@ The dmdSec element should comply with
       </requirement>
     </fileSec>
     <structMap ID="structMapElement">
-      <requirement ID="3DPM42" REQLEVEL="SHOULD" EXAMPLES="structMapExample">
+      <requirement ID="3DPM46" REQLEVEL="SHOULD" EXAMPLES="structMapExample">
         <description>
           <head>Authentication Document division</head>
           <p>Authentication documentation referenced in the file section is described in the structural map with three sub-divisions</p>
@@ -298,7 +330,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM43" REQLEVEL="MUST" EXAMPLES="structMapExample">
+      <requirement ID="3DPM47" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Authentication Document division identifier</head>
           <p>Mandatory, xml:id identifier must be unique within the package</p>
@@ -314,7 +346,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM44" REQLEVEL="MUST" EXAMPLES="structMapExample">
+      <requirement ID="3DPM48" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Authentication Document division label</head>
           <p>The Authentication documentation division div element uses the value "Authentication Documentation" from the vocabuulary as the value for the @LABEL attribute</p>
@@ -330,7 +362,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM45" REQLEVEL="MUST" EXAMPLES="structMapExample">
+      <requirement ID="3DPM49" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Authentication Documentation file references</head>
         </description>
@@ -346,7 +378,7 @@ The dmdSec element should comply with
           <dd>3DPM42</dd>
         </dl>
       </requirement>
-      <requirement ID="3DPM46" REQLEVEL="MUST" EXAMPLES="structMapExample">
+      <requirement ID="3DPM50" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Authentication Documentation file group reference pointer</head>
         </description>
@@ -362,7 +394,7 @@ The dmdSec element should comply with
           <dd>3DPM42</dd>
         </dl>
       </requirement>
-      <requirement ID="3DPM47" REQLEVEL="SHOULD" EXAMPLES="structMapExample">
+      <requirement ID="3DPM51" REQLEVEL="SHOULD" EXAMPLES="structMapExample">
         <description>
           <head>Other Document division</head>
           <p>Other documentation referenced in the file section is described in the structural map with three sub-divisions</p>
@@ -376,7 +408,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM48" REQLEVEL="MUST" EXAMPLES="structMapExample">
+      <requirement ID="3DPM52" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Other Document division identifier</head>
           <p>Mandatory, xml:id identifier must be unique within the package</p>
@@ -392,7 +424,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM49" REQLEVEL="MUST" EXAMPLES="structMapExample">
+      <requirement ID="3DPM53" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Other Document division label</head>
           <p>The Other documentation division div element uses the value "Other Documentation" from the vocabuulary as the value for the @LABEL attribute</p>
@@ -408,7 +440,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM50" REQLEVEL="MUST" EXAMPLES="structMapExample">
+      <requirement ID="3DPM54" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Authentication Documentation file group reference pointer</head>
         </description>
@@ -424,7 +456,7 @@ The dmdSec element should comply with
           <dd>3DPM46</dd>
         </dl>
       </requirement>
-      <requirement ID="3DPM51" REQLEVEL="MUST" EXAMPLES="structMapExample">
+      <requirement ID="3DPM55" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Data division</head>
           <p>Within 3DPM CITS data MUST be held in a data folder within a minimum single representation and described in the structMap within a single sub-division.</p>
@@ -440,7 +472,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM52" REQLEVEL="MUST" EXAMPLES="structMapExample">
+      <requirement ID="3DPM56" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Data division identifier</head>
           <p>Mandatory, 'xml:id' identifier must be unique within the package.</p>
@@ -456,7 +488,7 @@ The dmdSec element should comply with
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM53" REQLEVEL="MUST" EXAMPLES="structMapExample">
+      <requirement ID="3DPM57" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Data division label</head>
           <p>The representations' data division '&lt;div&gt;` element must have the `@LABEL` attribute value "DATA" taken from the vocabulary.</p>
@@ -537,19 +569,21 @@ Information regarding the behavior section is found in the
   <Example ID="fileSecExample" LABEL="METS representation mets example for an IP following CITS 3DPM with administrative metadata at group level.">
     <mets:fileSec ID="filesec-example">
       <mets:fileGrp ID="filegrp-documentation-authentication" USE="Documentation">
-        <!--Documentation is grouped in one or more fileGrp with the use being the path to the documentation-->
-        <!--This documentation is for the representation, e.g. authentication and digital signature information relevant to the product model.-->
-        <!--Digital provenance metadata can be referenced for each file using the ADMID attribute.-->
-        <mets:file ID="file-validation-properties-file1" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessing.document" SIZE="43445212" CREATED="2023-08-15T12:08:15.432+01:00" CHECKSUM="160D71F56C2CE685CE7FBD679076FD76B3C67EE9AB5062F5EF5C99AE39C1F43B" CHECKSUMTYPE="SHA-256">
-          <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/validationprops1.docx" />
-        </mets:file>
-        <mets:file ID="file-documentation-verification-report1" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="31462826" CREATED="2023-08-15T14:44:45.432+01:00" CHECKSUM="0FE9683451D0390BCDEF19CE10CFD287A2D944B6A33D246681FEF27F44FFAF1D" CHECKSUMTYPE="SHA-256">
-          <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/verificationrep1.docx" />
+        <mets:file ID="file-validation-report" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessing.document" SIZE="43445212" CREATED="2023-08-15T12:08:15.432+01:00" CHECKSUM="160D71F56C2CE685CE7FBD679076FD76B3C67EE9AB5062F5EF5C99AE39C1F43B" CHECKSUMTYPE="SHA-256">
+          <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/validationrep.docx" />
         </mets:file>
       </mets:fileGrp>
       <mets:fileGrp ID="filegrp-original-product-model" USE="Representations" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" ADMD="digiprov-premis-file3">
         <mets:file ID="file-original-product-model" MIMETYPE="dwg" SIZE="10338744" CREATED="2024-04-24T14:33:23.617+01:00" CHECKSUM="B1CF59678A21C2805370536AB1097735D7E9F3FDDDCAE3757426ED85F6350A48" CHECKSUMTYPE="SHA-256">
           <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="data/product1.dwg" />
+        </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp ID="filegrp-documentation-other" USE="Documentation">
+        <mets:file ID="file-licence-agreement" MIMETYPE="application/pdf" SIZE="21464778" CREATED="2024-08-15T12:08:15.432+01:00" CHECKSUM="0FE9683451D0390BCDEF19CE10CFD287A2D944B6A33D246681FEF27F44FFAF1D" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/other/subagreement.pdf" />
+        </mets:file>
+        <mets:file ID="file-electronic-signature-validation" MIMETYPE="application/pdf" SIZE="3162826" CREATED="2024-08-15T14:44:45.432+01:00" CHECKSUM="160D71F56C2CE685CE7FBD679076FD76B3C67EE9AB5062F5EF5C99AE39C1F43B" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/other/signaturevalidation.pdf" />
         </mets:file>
       </mets:fileGrp>
     </mets:fileSec>
@@ -603,13 +637,21 @@ Information regarding the behavior section is found in the
         <mets:mdRef LOCTYPE="URL" xlink:href="metadata/preservation/premis2.xml" xlink:type="simple" MDTYPE="PREMIS" MIMETYPE="application/xml" SIZE="1211" CREATED="2024-04-24T14:11:29.309+01:00" CHECKSUM="8aa278038dbad54bbf142e7d72b493e2598a94946ea1304dc82a79c6b4bac3d5 " CHECKSUMTYPE="SHA-256" />
       </mets:digiprovMD>
     </mets:amdSec>
-    <mets:fileSec ID="filesecExample" xmlns:mets="http://www.loc.gov/METS/">
+    <mets:fileSec ID="filesec-product-model-original-product-model" xmlns:mets="http://www.loc.gov/METS/">
       <mets:fileGrp ID="filegrp-documentation-authentication" USE="Documentation">
         <mets:file ID="file-validation-properties-file1" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessing.document" SIZE="43445212" CREATED="2023-08-15T12:08:15.432+01:00" CHECKSUM="160D71F56C2CE685CE7FBD679076FD76B3C67EE9AB5062F5EF5C99AE39C1F43B" CHECKSUMTYPE="SHA-256">
           <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/validationprops1.docx" xmlns:xlink="http://www.w3.org/1999/xlink" />
         </mets:file>
         <mets:file ID="file-documentation-verification-report1" MIMETYPE="application/vnd.openxmlformats-officedocument.wordprocessingml.document" SIZE="31462826" CREATED="2023-08-15T14:44:45.432+01:00" CHECKSUM="0FE9683451D0390BCDEF19CE10CFD287A2D944B6A33D246681FEF27F44FFAF1D" CHECKSUMTYPE="SHA-256">
           <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/authentication/verificationrep1.docx" xmlns:xlink="http://www.w3.org/1999/xlink" />
+        </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp ID="filegrp-documentation-other" USE="Documentation">
+        <mets:file ID="file-licence-agreement" MIMETYPE="application/pdf" SIZE="21464778" CREATED="2024-08-15T12:08:15.432+01:00" CHECKSUM="0FE9683451D0390BCDEF19CE10CFD287A2D944B6A33D246681FEF27F44FFAF1D" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/other/subagreement.pdf" />
+        </mets:file>
+        <mets:file ID="file-electronic-signature-validation" MIMETYPE="application/pdf" SIZE="3162826" CREATED="2024-08-15T14:44:45.432+01:00" CHECKSUM="160D71F56C2CE685CE7FBD679076FD76B3C67EE9AB5062F5EF5C99AE39C1F43B" CHECKSUMTYPE="SHA-256" ADMID="digiprov-premis-file1">
+          <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:type="simple" xlink:href="documentation/other/signaturevalidation.pdf" />
         </mets:file>
       </mets:fileGrp>
       <mets:fileGrp ID="filegrp-original-product-model" USE="Representations" csip:CONTENTINFORMATIONTYPE="cits3dpm_v1_0" ADMD="preservation-premis-file3" DMDID="dmd-ead-file2" xmlns:csip="https://DILCIS.eu/XML/METS/CSIPExtensionMETS">
