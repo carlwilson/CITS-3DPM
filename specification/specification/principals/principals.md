@@ -6,10 +6,10 @@ The LOTAR “Long Term Archiving of digital technical product information” ser
 + specific (mandatory) requirements of LOTAR with regard to essential data or metadata elements in Information Packages ate translated as optional requirements in the 3D PM CITS;
 + the scope of the E-ARK specifications are not altered to encompass areas covered by LOTAR but not covered by E-ARK, for example process requirements and management procedures.
 
-A conformant E-ARK 3D PM Information Package will not imply conformance or validation against LOTAR, but an archive will be able to use use the E-ARK 3D PM CITS together with the other E-ARK package specifications to produce Information Packages that support LOTAR compliance.
+A conformant E-ARK 3DPM Information Package will not imply conformance or validation against LOTAR, but an archive will be able to use use the E-ARK 3DPM CITS together with the other E-ARK package specifications to produce Information Packages that can support LOTAR compliance.
 ## Principal - use of PREMIS
 
-PREMIS can be usefully used to meet the requirements in LOTAR for the recording of Validation and Verification events, Digital Signatures, Rights and Digital Provenance Information). Neither CSIP or 3D PM CITS makes the use of PREMIS mandatory but guidance as to how it can be used to provide LOTAR conformance is provided by this CITS. 
+PREMIS can be usefully used to meet the requirements in LOTAR for the recording of Validation and Verification events, Digital Signatures, Rights and Digital Provenance Information). Neither CSIP or 3DPM CITS makes the use of PREMIS mandatory but guidance as to how it can be used to provide LOTAR conformance is provided by this CITS. 
 
 From the CSIP and PREMIS CITS: 
 + PREMIS should be used to record detailed technical metadata;
@@ -19,25 +19,25 @@ From the CSIP and PREMIS CITS:
 + Detailed rights information should be included in PREMIS. High-level rights information in METS indicates restrictions. Detailed, object-specific rights information will be included in the PREMIS metadata;
 +	File format information for all files should be included as Persistent Unique Identifier (PUID) values in the appropriate PREMIS semantic units.
   
-Technical and preservation metadata in the context of the 3D PM CITS can include:
+Technical and preservation metadata in the context of the 3DPM CITS can include:
 +	Creating agent;
 +	Reference to the content information standard (e.g. STEP);
 +	Reference to the LOTAR standard part for the content information type; 
 +	Information about the generating system.
 
-Event descriptions in the context of the 3 PM CITS can include:
+Event descriptions in the context of the 3DPM CITS can include:
 +	Creation events;
 +	Conversion or change events;
 +	Digital Signature events;
 +	Verification events and results;
 +	Validation events and results.
 
-Detailed technical metadata in the context of the 3D PM CITS can include:
+Detailed technical metadata in the context of the 3DPM CITS can include:
 +	File format, characterisation,  checksums;
 +	Detailed part number, version, product model and issue information;
 +	Relationships for the digital object (is part of, contains parts).
 
-Rights information in the context of 3D PM CITS can include:
+Rights information in the context of 3DPM CITS can include:
 +	Access rights;
 +	Export controls;
 +	License restrictions;
