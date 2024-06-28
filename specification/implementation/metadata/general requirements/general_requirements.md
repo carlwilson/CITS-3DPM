@@ -56,12 +56,12 @@ According to the CITS PREMIS: “When using Preservation Metadata together with 
 
 It is recommended that users review the CITS PREMIS specification.
 
-3DPM recommends the inclusion of PREMIS files at Representation level to include Authentication events, Provenenace and Digital Signature information for Product Information Models and Content Objects respectively.
+3DPM recommends the inclusion of PREMIS files at Representation level to include Authentication events, Provenance and Digital Signature information for Product Information Models and Content Objects.
 
 **3DPM10:** there SHOULD be a PREMIS file produced according to CITS PREMIS and the requirements of this CITS in the representation/metadata/preservation folder of each Representation of the Information Package.
 
 ## Rights Metadata
 From the principle above detailed Rights information should be recorded within PREMIS and as such a PREMIS file should be included at package level to contain this. 
 
-**3DPM11:** there SHOULD be a PREMIS file produced according to CITS PREMIS and the requirements of this CITS in the metadata/preservation folder of the Information Package.
+**3DPM11:** there SHOULD be a PREMIS file produced according to CITS PREMIS and the requirements of this CITS in the metadata/preservation folder of the Information Package containing Rights information.
 
