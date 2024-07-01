@@ -6,7 +6,7 @@
 | Product Model Data| Vocabulary3DPM|
 ||Other Content Category:|
 ||@csip:OTHERTYPE|
-|Other Documentation| Vocabulary 3DPM |
+|Other Documentation| Vocabulary3DPM |
 ||Other Documentation fileGrp and division label |
 || @LABEL='Other Documentation |
 | Authentication Documentation | Vocabulary 3DPM |
