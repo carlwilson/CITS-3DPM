@@ -1,11 +1,19 @@
-# Introduction
-## Purpose
+# 2. Introduction
+
+<a name="Section2.1"><a/>
+
+## 2.1 Purpose
 The purpose of this document is to describe the Content Information Type Specification (CITS) for 3D Product Models (3DPM). The specification is designed to be used for the transfer to archives as well as for records exchange between different 3D Product Information Model  systems. The specification is supported by METS profiles for the Root and Representation METS files and accompanying Guideline document.
-## Scope
-Use of 3D data is widespread across many domains, with a plethora of applications and data formats. This 3D Product Model content specification limits its scope to the area of 3D digital product data such as computer aided design (CAD) or product data model (PDM) data. There is an international standard for the long term archiving of this class of data in the LOTAR “Long Term Archiving and Retrieval of digital technical product information”[^1], which is published as the EN and NAS 9300 series. However although LOTAR extensively references and extends ISO 14721 the “Open reference model for Archiving Information System”, (OAIS) it does not extend into areas detailed in the E-ARK common specification for information packages (CSIP). LOTAR also references and builds on ISO 10303, the Standard for the Exchange of Product model data (STEP) and so with this E-ARK 3DPM CITS we have the opportunity to add to a layered standards model as seen below.
+
+<a name="Section2.2"><a/>
+
+## 2.2 Scope
+Use of 3D data is widespread across many domains, with a plethora of applications and data formats. This 3D Product Model content specification limits its scope to the area of 3D digital product data such as computer aided design (CAD) or product data model (PDM) data. There is an international standard for the long term archiving of this class of data in the LOTAR “Long Term Archiving and Retrieval of digital technical product information”[^1], which is published as the EN and NAS 9300 series. However although LOTAR extensively references and extends ISO 14721 the “Open reference model for Archiving Information System”, (OAIS) it does not extend into areas detailed in the E-ARK common specification for information packages (CSIP). LOTAR also references and builds on ISO 10303, the Standard for the Exchange of Product model data (STEP) and so with this E-ARK 3DPM CITS we have the opportunity to add to a layered standards model as seen in [Section 2.3](#Section2.3).
 [^1]: https://lotar-international.org/lotar-standard/
 
-## Layered Data Model
+<a name="Section2.3"><a/>
+
+## 2.3 Layered Data Model
 This section introduces the role of the CITS 3DPM and its dependencies on the basic structures of the Information Package.
 
 > This specification is created based on the requirements of the Common Specification for Information Packages (CSIP),  the specification for Submission Information Packages (E-ARK SIP) and the specification for Archival Information Packages (E-ARK AIP). To fully understand its requirements, we highly recommend that users review the requirements and the terminology of the source documents, before using this specification.
