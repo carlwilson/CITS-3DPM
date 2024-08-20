@@ -3,7 +3,7 @@
 <a name="Section4.1"><a/>
 
 ## 4.1 Package Structure
-The CITS 3D Product Model information structure inherits its package structure from the E-ARK Common Specification for Information Packages and is shown in ([Figure 4](#fig4)). It can be seen that additional folders have been added for authentication documentation at root and representation level but otherwise the structure is identical. 
+The CITS 3D Product Model information structure inherits its package structure from the E-ARK Common Specification for Information Packages and is shown in [Figure 4](#fig4). It can be seen that additional folders have been added for authentication documentation at root and representation level but otherwise the structure is identical. 
 
 <a name="fig4"></a>
 ![Example Information Package Folder Structure](/specification/figs/fig_4_package_structure.svg "Example Information Package Folder Structure")
@@ -136,7 +136,7 @@ The administrative metadata section contains four sub-sections each used to reco
 
 The CSIP (and METS) categorise preservation metadata as administrative metadata, specifically digital provenance metadata (following the avaiable guidelines published by the Library of Congress): (http://www.loc.gov/standards/premis/guidelines2017-premismets.pdf) and hence all preservation metadata should be referenced from a digiprovMD element within the amdSec.
 
-As detailed Rights information is required by LOTAR for the package then CITS 3D PM recommends the inclusion of a PREMIS file in the metadata/preservation folder containing detailed Rights information as described in [section 4.5.3]{#section4.5.3) and any digital provenance metadata as described in the CITS Preservation Metadata. 
+As detailed Rights information is required by LOTAR for the package then CITS 3D PM recommends the inclusion of a PREMIS file in the metadata/preservation folder containing detailed Rights information as described in [Section 4.5.3](#Section4.5.3) and any digital provenance metadata as described in the CITS Preservation Metadata. 
 
 ### 4.3.6 Root METS file metadata section (element fileSec)
 The CSIP does not make use of the METS fileSec element mandatory, but it is strongly recommended. In the 3D PM CITS the use of the METS fileSec element at the package level becomes mandatory, such as to reference the METS files within each representation.
