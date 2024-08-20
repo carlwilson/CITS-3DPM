@@ -8,8 +8,7 @@ The purpose of this document is to describe the Content Information Type Specifi
 <a name="Section2.2"><a/>
 
 ## 2.2 Scope
-Use of 3D data is widespread across many domains, with a plethora of applications and data formats. This 3D Product Model content specification limits its scope to the area of 3D digital product data such as computer aided design (CAD) or product data model (PDM) data. There is an international standard for the long term archiving of this class of data in the LOTAR “Long Term Archiving and Retrieval of digital technical product information”[^1], which is published as the EN and NAS 9300 series. However although LOTAR extensively references and extends ISO 14721 the “Open reference model for Archiving Information System”, (OAIS) it does not extend into areas detailed in the E-ARK common specification for information packages (CSIP). LOTAR also references and builds on ISO 10303, the Standard for the Exchange of Product model data (STEP) and so with this E-ARK 3DPM CITS we have the opportunity to add to a layered standards model as seen in [Section 2.3](#Section2.3).
-[^1]: https://lotar-international.org/lotar-standard/
+Use of 3D data is widespread across many domains, with a plethora of applications and data formats. This 3D Product Model content specification limits its scope to the area of 3D digital product data such as computer aided design (CAD) or product data model (PDM) data. There is an international standard for the long term archiving of this class of data in the LOTAR “Long Term Archiving and Retrieval of digital technical product information”[^1], which is published as the EN/NAS 9300 series. However although LOTAR extensively references and extends ISO 14721 the “Open reference model for Archiving Information System”, (OAIS) it does not extend into areas detailed in the E-ARK common specification for information packages (CSIP). LOTAR also references and builds on ISO 10303, the Standard for the Exchange of Product model data (STEP) and so with this E-ARK 3DPM CITS we have the opportunity to add to a layered standards model as seen in [Section 2.3](#Section2.3).
 
 <a name="Section2.3"><a/>
 
@@ -42,3 +41,5 @@ The CITS 3DPM builds on the existing LOTAR standard for “long-term archiving o
 ![LAYERED DATA MODEL](/specification/figs/fig_3_layered_data_model.svg "CITS #DPM Layered Data Model.")
 
 **Figure 3:** CITS 3DPM Layered Data Model.
+
+[^1]: https://lotar-international.org/lotar-standard/
