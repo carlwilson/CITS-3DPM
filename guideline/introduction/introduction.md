@@ -1,18 +1,26 @@
-# Introduction
-## Purpose
-The purpose of this document is to accompany the CITS 3D Product Model Data Specification and to provider context and rationale for the principals and requirements of the specification. The specification is designed to be used for the transfer to archives as well as for records exchange between different 3D Product Information Model  systems. The specification is supported by METS profiles for the Root and Representation METS files and this accompanying Guideline document.
-## Scope
-Use of 3D data is widespread across many domains, with a plethora of applications and data formats. This 3D Product Model  content specification limits its scope to the area of 3D digital product data such as computer aided design (CAD) or product data model (PDM) data. There is an international standard for the long term archiving of this class of data in the LOTAR “Long Term Archiving and Retrieval of digital technical product information”[^1],  which is published as the EN and NAS 9300 series. However although LOTAR extensively references and  extends ISO 14721 the “Open reference model for Archiving Information System”, (OAIS) it does not extend into areas detailed in the E-ARK common specification for information packages (CSIP). LOTAR also references and builds on ISO 10303, the Standard for the Exchange of Product model data (STEP) and so with this E-ARK 3D PM CITS we have the opportunity to add to a layered standards model as seen below.
-[^1]: https://lotar-international.org/lotar-standard/
+# 2 Introduction
 
-## Layered Data Model
+<a name="Section 2.1"><a/>
+
+## 2.1 Purpose
+The purpose of this document is to accompany the CITS 3D Product Model Data Specification and to provider context and rationale for the principals and requirements of the specification. The specification is designed to be used for the transfer to archives as well as for records exchange between different 3D Product Information Model  systems. The specification is supported by METS profiles for the Root and Representation METS files and this accompanying Guideline document.
+
+<a name="Section 2.2"><a/>
+
+## 2.2 Scope
+Use of 3D data is widespread across many domains, with a plethora of applications and data formats. This 3D Product Model  content specification limits its scope to the area of 3D digital product data such as computer aided design (CAD) or product data model (PDM) data. There is an international standard for the long term archiving of this class of data in the LOTAR “Long Term Archiving and Retrieval of digital technical product information”[^1],  which is published as the EN and NAS 9300 series. However although LOTAR extensively references and  extends ISO 14721 the “Open reference model for Archiving Information System”, (OAIS) it does not extend into areas detailed in the E-ARK common specification for information packages (CSIP). LOTAR also references and builds on ISO 10303, the Standard for the Exchange of Product model data (STEP) and so with this E-ARK 3D PM CITS we have the opportunity to add to a layered standards model as seen below in [Section 2.3](#Section2.2).
+
+<a name="Section 2.3"><a/>
+
+## 2.3 Layered Data Model
 This section introduces the role of the CITS 3D PM and its dependencies on the basic structures of the Information Package.
 
 > This specification is created based on the requirements of the Common Specification for Information Packages (CSIP),  the specification for Submission Information Packages (E-ARK SIP) and the specification for Archival Information Packages (E-ARK AIP). To fully understand its requirements, we highly recommend that users review the requirements and the terminology of the source documents, before using this specification.
 
 The data model structure is based on a layered approach for information package definitions (Figure 2). The Common Specification for Information Packages (CSIP) forms the outermost layer. The general SIP, AIP and DIP specifications add respectively, submission, archiving and dissemination information to the CSIP specification. The third layer of the model represents specific content information type specifications, such as this 3D PM specification. Additional layers for business-specific specifications and local variant implementations of any specification can be added to suit the needs of the organisation.
 
-<a name="fig2"></a>
+<a name="fig2"></a>\
+
 ![Data Model Structure](/specification/figs/fig_2_data_model_structure.svg "Data Model Structure")
 
 **Figure 2:** Data Model Structure
@@ -32,3 +40,5 @@ The CITS 3D PM builds on the existing LOTAR standard for “long-term archiving 
 ![LAYERED DATA MODEL](/specification/figs/fig_3_layered_data_model.svg "CITS #DPM Layered Data Model.")
 
 **Figure 3:** CITS 3D PM Layered Data Model.
+
+[^1]: https://lotar-international.org/lotar-standard/
