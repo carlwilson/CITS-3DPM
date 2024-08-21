@@ -11,7 +11,7 @@
 
 | Revision | Date       | Authors(s) | Organisation | Description |
 | ---------| ---------- | -----------| ------------ | ----------- |
-| 0.1       | 05.04.2024 | Stephen Mackey                | Penwern Limited          | First version         |
+| 1.0.0     |   | Stephen Mackey                | Penwern Limited          | First version         |
 
 ## III. Contact & Feedback
 
