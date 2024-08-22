@@ -4,7 +4,7 @@
 
 ## 3.1 CITS 3D PM Requirements Structure
 
-The Content Information Type Specification for 3D Product Model data aims to define the necessary elements required to preserve the accessibility and authenticity of 3D Product Model data over time and across changing technical environments. The specification builds on the international standard for long-term archiving of Product Model data (LOTAR) and facilitates conformance to the standard within an E-ARK packaging framework. In order to achieve this the specification elevates the level (and adjusts the cardinality) of some of the requirements set out in the Common Specification (CSIP) and package specifications (namely SIP and AIP) and adds new requirements for the package structure, descriptive metadata, preservation metadata and accompanying METS files. It also introduces new requirements for authentication. The specification sets out general principals that underpin the specific requirements and further context for the requirements and principals can be found in the accompanying guideline to this document.
+The Content Information Type Specification for 3D Product Model data aims to define the necessary elements required to preserve the accessibility and authenticity of 3D Product Model data over time and across changing technical environments. The specification builds on the international standard for long-term archiving of Product Model data (LOTAR) and facilitates conformance to the standard within an E-ARK packaging framework. In order to achieve this the specification elevates the level (and adjusts the cardinality) of some of the requirements set out in the Common Specification (CSIP) and package specifications (namely SIP and AIP) and adds new requirements for the package structure, descriptive metadata, preservation metadata and accompanying METS files. It also introduces new requirements for authentication. The specification sets out general principles that underpin the specific requirements and further context for the requirements and principles can be found in the accompanying guideline to this document.
 
 <a name="Section3.2"><a/>
 
@@ -58,7 +58,7 @@ Rights information in the context of 3DPM CITS can include:
 +	Personal identifiable information restrictions;
 +	Company specific classifications.
 
-Use of PREMIS must conform to the requirements of the CITS Preservation Metadata. 
+Use of PREMIS must conform to the requirements of the CAPM. 
 
 <a name="Section3.3"><a/>
 
