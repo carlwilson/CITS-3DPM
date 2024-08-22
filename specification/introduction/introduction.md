@@ -34,6 +34,8 @@ The structure allows the addition of more detailed requirements for metadata ent
 + Increasing the granularity of metadata elements by using more detailed data structures, or 
 + Adding local controlled vocabularies.
 
+For consistency, design principles are reused between layers as much as possible.
+
 The CITS 3DPM builds on the existing LOTAR standard for “long-term archiving of digital technical product information”  which in itself builds on the standard for an Open Archival Information System (OAIS, ISO 14721) and the Standard for the Exchange of Product Model Data (STEP, ISO 1303). So for CITS 3DPM in particular we have a layered data model as seen in  [Figure 3](#fig3). Note however that compliance with LOTAR or STEP is not mandatory within 3D PM but is recommended. Individual organisational archiving strategies for 3D Product Model data may or may not include STEP representations of model data and may include all or some of the elements of the LOTAR standard. The 3DPM CITS provides for accomodation of these standards but makes compliance an organisational choice.
 
 <a name="fig3"></a>
