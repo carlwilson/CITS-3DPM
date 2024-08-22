@@ -8,9 +8,9 @@ The Content Information Type Specification for 3D Product Model data aims to def
 
 <a name="Section3.2"><a/>
 
-## 3.2 Principals
+## 3.2 Principles
 
-### 3.2.1 Principal - support for LOTAR conformance
+### 3.2.1 Principle - support for LOTAR conformance
 
 The LOTAR “Long Term Archiving of digital technical product information” series is an international standard for the long term archiving of Product Model data (such as computer aided design CAD or product data model PDM data). LOTAR extensively references and  extends ISO 14721 the “reference model for an Open Archival Information System”, (OAIS) but does not extend into areas detailed in the E-ARK common specification for information packages (CSIP). LOTAR also references and builds on ISO 10303, the Standard for the Exchange of Product Model data (STEP). This eArchiving 3D Product Model CITS creates a layered model for creating archival packages for Product Models that allows conformance to LOTAR and STEP whilst maintaining conformance with the CSIP and with the individual eArchiving package specifications (SIP, AIP and DIP). Specifically:
 
@@ -20,7 +20,7 @@ The LOTAR “Long Term Archiving of digital technical product information” ser
 
 A conformant E-ARK 3DPM Information Package will not imply conformance or validation against LOTAR, but an archive will be able to use use the E-ARK 3DPM CITS together with the other E-ARK package specifications to produce Information Packages that can support LOTAR compliance.
 
-### 3.2.2 Principal - use of PREMIS
+### 3.2.2 Principle - use of PREMIS
 
 PREMIS can be usefully used to meet the requirements in LOTAR for the recording of Validation and Verification events, Digital Signatures, Rights and Digital Provenance Information). Neither CSIP or 3DPM CITS makes the use of PREMIS mandatory but guidance as to how it can be used to provide LOTAR conformance is provided by this CITS. 
 
