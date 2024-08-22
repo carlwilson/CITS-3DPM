@@ -3,7 +3,7 @@
 <a name="Section 2.1"><a/>
 
 ## 2.1 Purpose
-The purpose of this document is to accompany the CITS 3D Product Model Data Specification and to provider context and rationale for the principals and requirements of the specification. The specification is designed to be used for the transfer to archives as well as for records exchange between different 3D Product Information Model  systems. The specification is supported by METS profiles for the Root and Representation METS files and this accompanying Guideline document.
+The purpose of this document is to accompany the CITS 3D Product Model Data Specification and to provider context and rationale for the principles and requirements of the specification. The specification is designed to be used for the transfer to archives as well as for records exchange between different 3D Product Information Model  systems. The specification is supported by METS profiles for the Root and Representation METS files and this accompanying Guideline document.
 
 <a name="Section 2.2"><a/>
 
