@@ -1,18 +1,21 @@
-# 2. Introduction
+# Introduction
 
 <a name="Section2.1"><a/>
 
-## 2.1 Purpose
+## Purpose
+
 The purpose of this document is to describe the Content Information Type Specification (CITS) for 3D Product Models (3DPM). The specification is designed to be used for the transfer to archives as well as for records exchange between different 3D Product Information Model  systems. The specification is supported by METS profiles for the Root and Representation METS files and accompanying Guideline document.
 
 <a name="Section2.2"><a/>
 
-## 2.2 Scope
+## Scope
+
 Use of 3D data is widespread across many domains, with a plethora of applications and data formats. This 3D Product Model content specification limits its scope to the area of 3D digital product data such as computer aided design (CAD) or product data model (PDM) data. There is an international standard for the long term archiving of this class of data in the LOTAR “Long Term Archiving and Retrieval of digital technical product information”[^1], which is published as the EN/NAS 9300 series. However although LOTAR extensively references and extends ISO 14721 the “Open reference model for Archiving Information System”, (OAIS) it does not extend into areas detailed in the E-ARK common specification for information packages (CSIP). LOTAR also references and builds on ISO 10303, the Standard for the Exchange of Product model data (STEP) and so with this E-ARK 3DPM CITS we have the opportunity to add to a layered standards model as seen in [Section 2.3](#Section2.3).
 
 <a name="Section2.3"><a/>
 
-## 2.3 Layered Data Model
+## Layered Data Model
+
 This section introduces the role of the CITS 3DPM and its dependencies on the basic structures of the Information Package.
 
 > This specification is created based on the requirements of the Common Specification for Information Packages (CSIP),  the specification for Submission Information Packages (E-ARK SIP) and the specification for Archival Information Packages (E-ARK AIP). To fully understand its requirements, we highly recommend that users review the requirements and the terminology of the source documents, before using this specification.
@@ -21,7 +24,7 @@ The data model structure is based on a layered approach for information package 
 
 <a name="fig2"></a>
 
-![Data Model Structure](/specification/figs/fig_2_data_model_structure.svg "Data Model Structure")
+![Data Model Structure](figs/fig_2_data_model_structure.svg "Data Model Structure")
 
 **Figure 2:** Data Model Structure
 
@@ -31,6 +34,7 @@ Every level in the data model structure inherits metadata entities and elements 
 + Substituting metadata schemas for standards more appropriate for the local implementation. 
 
 The structure allows the addition of more detailed requirements for metadata entities, for example, by:
+
 + Increasing the granularity of metadata elements by using more detailed data structures, or 
 + Adding local controlled vocabularies.
 
@@ -40,7 +44,7 @@ The CITS 3DPM builds on the existing LOTAR standard for “long-term archiving o
 
 <a name="fig3"></a>
 
-![LAYERED DATA MODEL](/specification/figs/fig_3_layered_data_model.svg "CITS #DPM Layered Data Model.")
+![LAYERED DATA MODEL](figs/fig_3_layered_data_model.svg "CITS #DPM Layered Data Model.")
 
 **Figure 3:** CITS 3DPM Layered Data Model.
 
