@@ -1,0 +1,165 @@
+---
+preface:
+  - name: introduction
+    type: file
+    source: spec-publisher/res/md/common-intro.md
+
+body:
+  - name: introduction
+    type: file
+    source: specification/introduction/introduction.md
+
+  - name: specification
+    type: file
+    source: specification/specification/specification.md
+
+  - name: implementation
+    type: file
+    source: specification/implementation/implementation.md
+
+  - name: requirements.METS.root
+    type: requirements
+    heading: "Table 2: Root METS root element (element METS root)"
+    requirements:
+      - 3DPM12
+      - 3DPM13
+      - 3DPM14
+      - 3DPM15
+
+  - name: metsheader
+    type: file
+    source: specification/implementation/metshead.md
+
+  - name: requirements.METS.header
+    type: requirements
+    heading: "Table 3: Root METS header section (element METS Header)"
+    requirements:
+      - 3DPM16
+
+  - name: metsdmdsec
+    type: file
+    source: specification/implementation/metsdmdsec.md
+
+  - name: requirements.METS.filesec
+    type: requirements
+    heading: "Table 4: Root METS file metadata section (element fileSec)"
+    requirements:
+      - 3DPM17
+      - 3DPM18
+      - 3DPM19
+      - 3DPM20
+      - 3DPM21
+
+  - name: metsstructmap
+    type: file
+    source: specification/implementation/metsstructmap.md
+
+  - name: requirements.METS.structmap
+    type: requirements
+    heading: "Table 5: Root METSstructural map (element structMap)"
+    requirements:
+      - 3DPM22
+      - 3DPM23
+      - 3DPM24
+      - 3DPM25
+      - 3DPM26
+      - 3DPM27
+      - 3DPM28
+      - 3DPM29
+      - 3DPM30
+      - 3DPM31
+      - 3DPM32
+
+  - name: repmetsfiles
+    type: file
+    source: specification/implementation/repmetsfiles.md
+
+  - name: requirements.METS.reproot
+    type: requirements
+    heading: "Table 6: Representation METS root element (element METs root)"
+    requirements:
+      - 3DPM33
+      - 3DPM34
+      - 3DPM35
+      - 3DPM36
+      - 3DPM37
+
+  - name: repmetsheader
+    type: file
+    source: specification/implementation/repmetsheader.md
+
+  - name: requirements.METS.repamdsec
+    type: requirements
+    heading: "Table 7: Representation METS administrative metadata (element amdSec)"
+    requirements:
+      - 3DPM38
+      - 3DPM39
+      - 3DPM40
+
+  - name: repmetsfilesec
+    type: file
+    source: specification/implementation/repmetsfilesec.md
+
+  - name: requirements.METS.repfilesec
+    type: requirements
+    heading: "Table 8: Representation METS file metadata (element fileSec)"
+    requirements:
+      - 3DPM41
+      - 3DPM42
+      - 3DPM43
+      - 3DPM44
+      - 3DPM45
+      - 3DPM46
+
+  - name: repmetsstructmap
+    type: file
+    source: specification/implementation/repmetsstructmap.md
+
+  - name: requirements.METS.repstructmap
+    type: requirements
+    heading: "Table 9: Representation METS structural map (element structMap)"
+    requirements:
+      - 3DPM47
+      - 3DPM48
+      - 3DPM49
+      - 3DPM50
+      - 3DPM51
+      - 3DPM52
+      - 3DPM53
+      - 3DPM54
+      - 3DPM55
+      - 3DPM56
+      - 3DPM57
+      - 3DPM58
+      - 3DPM59
+      - 3DPM60
+      - 3DPM61
+
+  - name: premis
+    type: file
+    source: specification/implementation/premis.md
+
+appendices:
+  - name: mets.examples
+    heading: "CITS3D Information Package METS Examples"
+    label: "A"
+    type: mets
+    section: Appendix
+
+  - name: mets.schema
+    heading: "External Schema"
+    label: "B"
+    type: mets
+    section: external_schema
+
+  - name: mets.vocabs
+    heading: "External Vocabularies"
+    label: "C"
+    type: mets
+    section: vocabulary
+
+  - name: mets.metadata.requirments
+    heading: "E-ARK CITS3D Metadata Requirements"
+    label: "E"
+    type: mets
+    section: requirements
