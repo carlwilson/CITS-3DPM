@@ -1,0 +1,26 @@
+- title: "Specification"
+  href: "/"
+
+- title: "PDF"
+  href: "/pdf/eark-cits-3dpm.pdf"
+
+- title: "Profile"
+  href: "/profile/"
+
+- title: "Schema"
+  href: "/schema/"
+
+- title: "Examples"
+  href: "/examples/"
+
+- title: "About"
+  href: "/"
+  subcategories:
+    - subtitle: "Acknowledgements"
+      subextref: "/acknowledgements/"
+    - subtitle: "DILCIS"
+      subextref: "https://dilcis.eu/"
+    - subtitle: "On GitHub"
+      subextref: "https://github.com/DILCISBoard/CITS-3DPM"
+    - subtitle: "Download"
+      subextref: "https://github.com/DILCISBoard/CITS-3DPM/archive/main.zip"
