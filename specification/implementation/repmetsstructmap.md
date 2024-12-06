@@ -1,0 +1,3 @@
+### Representation METS structural map (element structMap)
+
+The METS structural map element is the only mandatory element in the METS specification and is hence mandatory within the Representation METS. There must be one structural map present in each Representation METS file following the requirements of the CSIP. As Authentication documentation SHOULD be included in each Representation within 3D PM CITS, there is also a mandatory requirement for a structMap division for the documentation/authentication folder. The specific requirements for elements, sub-elements and attributes for 3D PM CITS, which differ from the CSIP, are listed in the table. 
