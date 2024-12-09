@@ -147,8 +147,7 @@
       <requirement ID="REF_SIP_1" REQLEVEL="SHOULD">
         <description>
           <head>Representation METS header element</head>
-          <p>The 3DPM METS representation header element should comply with
- <a href="https://earksip.dilcis.eu/#extendeduseofthemetsheaderelement%60metshdr%60">metsHdr requirements of the SIP profile</a></p>
+          <p>The 3DPM METS representation header element should comply with <a href="https://earksip.dilcis.eu/#extendeduseofthemetsheaderelement%60metshdr%60">metsHdr requirements of the SIP profile</a></p>
         </description>
       </requirement>
     </metsHdr>
@@ -156,9 +155,7 @@
       <requirement ID="REF_CSIP_1" REQLEVEL="SHOULD">
         <description>
           <head>Descriptive metadata</head>
-          <p>
-The dmdSec element should comply with
- <a href="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdSec">dmdSec requirements in the CSIP profile</a></p>
+          <p>The dmdSec element should comply with <a href="http://earkcsip.dilcis.eu/#533-use-of-the-mets-descriptive-metadata-section-element-dmdSec">dmdSec requirements in the CSIP profile</a></p>
         </description>
       </requirement>
     </dmdSec>
@@ -508,7 +505,7 @@ The dmdSec element should comply with
       <requirement ID="3DPM59" REQLEVEL="MUST" EXAMPLES="structMapExample">
         <description>
           <head>Data division label</head>
-          <p>The representations' data division '&lt;div&gt;` element must have the `@LABEL` attribute value "DATA" taken from the vocabulary.</p>
+          <p>The representations' data division `&lt;div&gt;` element must have the `@LABEL` attribute value "DATA" taken from the vocabulary.</p>
           <dl xmlns="http://www.w3.org/1999/xhtml">
             <dt>METS XPath</dt>
             <dd>mets/structMap[@LABEL='CSIP']/div/div/[@LABEL='DATA']</dd>
@@ -555,9 +552,7 @@ The dmdSec element should comply with
         <description>
           <head>structLink</head>
           <p>Section not defined or used in CSIP, additional own uses may occur.</p>
-          <p>
-Information regarding the structural links is found in the 
- <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
+          <p>Information regarding the structural links is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
         </description>
       </requirement>
     </structLink>
@@ -566,9 +561,7 @@ Information regarding the structural links is found in the
         <description>
           <head>behaviorSec</head>
           <p>Section not defined or used in CSIP, additional own uses may occur.</p>
-          <p>
-Information regarding the behavior section is found in the 
- <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
+          <p>Information regarding the behavior section is found in the <a href="http://www.loc.gov/standards/mets/METSPrimer.pdf">METS Primer</a></p>
         </description>
       </requirement>
     </behaviorSec>

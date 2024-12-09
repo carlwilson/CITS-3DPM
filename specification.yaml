@@ -17,6 +17,10 @@ body:
     type: file
     source: specification/implementation/implementation.md
 
+  - name: mets
+    type: file
+    source: specification/implementation/mets.md
+
   - name: requirements.METS.root
     type: requirements
     heading: "Table 2: Root METS root element (element METS root)"
