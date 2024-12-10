@@ -78,7 +78,7 @@
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM34" REQLEVEL="MUST" RELATEDMAT="VocabularyContentCategory" EXAMPLES="metsRepElementExample">
+      <requirement ID="3DPM34" REQLEVEL="MUST" RELATEDMAT="VocabularyContentCategory" EXAMPLES="metsRepRootElementExample">
         <description>
           <head>Content Category</head>
           <p>The `mets/@TYPE` attribute is set to the value "OTHER".</p>
@@ -94,7 +94,7 @@
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM35" REQLEVEL="MUST" RELATEDMAT="VocabularyContentCategory Vocabulary3DPM" EXAMPLES="metsRepElementExample">
+      <requirement ID="3DPM35" REQLEVEL="MUST" RELATEDMAT="VocabularyContentCategory Vocabulary3DPM" EXAMPLES="metsRepRootElementExample">
         <description>
           <head>Other Content Category</head>
           <p>The `mets/@csip:OTHERTYPE` attribute is set to the value "Product Model Data".</p>
@@ -110,7 +110,7 @@
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM36" REQLEVEL="MUST" RELATEDMAT="VocabularyContentInformationTypeSpecification" EXAMPLES="metsRepElementExample">
+      <requirement ID="3DPM36" REQLEVEL="MUST" RELATEDMAT="VocabularyContentInformationTypeSpecification" EXAMPLES="metsRepRootElementExample">
         <description>
           <head>Content information type specification</head>
           <p>The `mets/@csip:CONTENTINFORMATIONTYPE` attribute is set to  the value "cits3dpm_v1_0"</p>
@@ -126,7 +126,7 @@
           </dl>
         </description>
       </requirement>
-      <requirement ID="3DPM37" REQLEVEL="MUST" EXAMPLES="metsRepElementExample">
+      <requirement ID="3DPM37" REQLEVEL="MUST" EXAMPLES="metsRepRootElementExample">
         <description>
           <head>METS Profile</head>
           <p>The value is set to "https://cits3dpm.dilcis.eu/profile/E-ARK-3dpm-REPRESENTATION-v1-0-0.xml".</p>

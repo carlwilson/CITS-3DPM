@@ -1,12 +1,11 @@
 # Implementation
 
-<a name="Section4.1"><a/>
-
 ## Package Structure
 
 The CITS 3D Product Model information structure inherits its package structure from the E-ARK Common Specification for Information Packages and is shown in [Figure 4](#fig4). It can be seen that additional folders have been added for authentication documentation at root and representation level but otherwise the structure is identical. 
 
 <a name="fig4"></a>
+
 ![Example Information Package Folder Structure](figs/fig_4_package_structure.svg "Example Information Package Folder Structure")
 
 **Figure 4:** Example Information Package Folder Structure
@@ -33,11 +32,7 @@ Specific requirements for the CITS 3D Product Model folder structure are as foll
 
 **3DPM3**: the Documentation folder at package and representation level SHOULD include a sub-folder named Other. This is an extension of CSIPSTR16.
 
-<a name="Section4.2"><a/>
-
 ## Metadata and Supporting Information
-
-<a name="Section4.2.1"><a/>
 
 ### Descriptive Metadata
 
@@ -46,8 +41,6 @@ According to LOTAR: “The producer creates a set of Descriptive Information (DI
 Neither CSIP or LOTAR prescribe specific schemas for descriptive information and so this is left to be determined by the user organisation. According to CSIP this should be according to a standardised schema such as for example EAD, Dublin Core, MODS or a locally defined schema that must be included in the package. 
 
 It is assumed that it would also be desirable that Validation information, i.e. Validation Properties rules data is also referenced. This specification does not specify where this information should be located in any respective standardised descriptive metadata schema and this will be an organisational decision. LOTAR does however prescribe that the location of information references in SIPs be stated in a Submission Agreement. This specification also recommends that Verification and Validation supporting documentation as described below is included in the package and that Verification and Validation events are recorded within PREMIS.  
-
-<a name="Section4.2.2"><a/>
 
 ### Authentication
 
@@ -74,9 +67,7 @@ Good archival practice states that we should not only include the reference to V
   
 This specification does not detail the content or format of Validation and Verification information which may be specified within other standards such as LOTAR.
 
-<a name="Section4.2.3"><a/>
-
-### Digital Signatures
+#### Digital Signatures
 
 A Digital Signature is a defined method to sign an object in electronic environments; it provides means to authenticate the signatory and the signed object in an unambiguous and safe way by attaching to or logically associating data in digital form to other digital objects. In LOTAR it is defined by an encrypted hash code with additional information such as time of creation and owner of the signature. 
 
@@ -86,9 +77,7 @@ LOTAR requires that a Digital Signature is provided on Ingest, i.e. production o
 
 This specification recommends that any Digital Signature information be recorded within PREMIS [Section 2](specification/specification.md). PREMIS also requires that the operations to be performed for validating a Digital Signature are known. This can be by means of a canonicalized method, or if by a local method either documentation or a persistent link to archived documentation or a resource must be provided.
 
-**3DPM9:** If Digital Signatures are provided then documentation MUST be included in the documentation/authentication folder or a persistent link provided to a resource. 
-
-<a name="Section4.2.4"><a/>
+**3DPM9:** If Digital Signatures are provided then documentation MUST be included in the documentation/authentication folder or a persistent link provided to a resource.
 
 ### Preservation Metadata
 
@@ -110,9 +99,8 @@ It is recommended that users review the Common Specification for Preservation Me
 
 **3DPM10:** there SHOULD be a PREMIS file produced according to the CSPM and the requirements of this CITS in the representation/metadata/preservation folder of each Representation of the Information Package.
 
-<a name="Section4.2.5"><a/>
-
 ### Rights Metadata
-From the principle above detailed Rights information should be recorded within PREMIS and as such a PREMIS file should be included at package level to contain this. 
+
+From the principle above detailed Rights information should be recorded within PREMIS and as such a PREMIS file should be included at package level to contain this.
 
 **3DPM11:** there SHOULD be a PREMIS file produced according to the CSPM and the requirements of this CITS in the metadata/preservation folder of the Information Package containing Rights information.
