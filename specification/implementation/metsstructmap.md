@@ -1,4 +1,4 @@
-### Root METS structural map (element structMap)
+#### Root METS structural map (element structMap)
 
 The METS structural map element is the only mandatory element in the METS specification. It provides an overview of the components described in the METS document. It can also link the elements in the structure to associated content files and metadata. In CITS 3D PM the package structMap describes the high-level structure of all the content in the package and links to at least one Representation. To allow for the inclusion of multiple Product Model Representations in each package, the CITS 3D PM specification requires that each Product Model has a discrete div element.
 

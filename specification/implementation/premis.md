@@ -1,11 +1,7 @@
 
-<a name="Section4.5"><a/>
+### PREMIS
 
-## PREMIS
-
-<a name="Section4.5.1"><a/>
-
-### Use of PREMIS in CITS 3D PM
+#### Use of PREMIS in CITS 3D PM
 
 The use of PREMIS within the 3D PM CITS must follow the requirements of the CITS PREMIS which can be found at: (<https://dilcis.eu/content-types/cits-premis>).
 
@@ -19,15 +15,11 @@ For 3D PM CITS the use of PREMIS follows an interpretation of LOTAR as described
 
 Following CITS PREMIS the CITS 3D PM follows the requirements and recommendation of the PREMIS Data Dictionary which can be found at: (<https://www.loc.gov/standards/premis/v3/premis-3-0-final.pdf>).
 
-<a name="Section4.5.2"><a/>
-
-### Attribute values and controlled vocabularies
+#### Attribute values and controlled vocabularies
 
 Use of controlled vocabularies for the values of semantic units is encouraged within the PREMIS Data Dictionary and through best practice. Specific controlled vocabularies for semantic units are not provided by the CITS but their use is encouraged, particularly the use of any vocabularies provided by the LOTAR standard. If local vocabularies are used within the repository then these should be included within each package.
 
-<a name="Section4.5.3"><a/>
-
-### Use of PREMIS at package level
+#### Use of PREMIS at package level
 
 PREMIS can be used in addition to METS to support compliance with LOTAR in recording  specific rights information at package level. Note that if PREMIS is used then the requirements of the CITS Preservation apply and those provided by the CITS 3D PM are in addition to these.
 
@@ -39,9 +31,7 @@ PREMIS can be used in addition to METS to support compliance with LOTAR in recor
 
 **3D PM53:** Rights for the entire package (e.g. copyright, license, statute, other, rights grants) MAY be recorded within the PREMIS file located in the metadata/preservation folder using the PREMIS Rights entity and must follow the guidelines set out in CITS PREMIS. Each individual rights statement (copyright, licence, statute, other, rights granted) must be held in a separate rightsStatement semantic unit. Designation of the basis for the right or permission can be taken from the vocabulary available at: <http://id.loc.gov/vocabulary/preservation/rightsBasis.html> which are: license, copyright, statute, other. Information on rights associated with the rights basis can be included within the otherRightsInformation PREMIS semantic unit container using values from available controlled vocabularies.
 
-<a name="Section4.5.4"><a/>
-
-### Use of PREMIS at Representation level
+#### Use of PREMIS at Representation level
 
 PREMIS can be used in addition to METS to support compliance with LOTAR in recording  specific Validation and Verification events information at representation level. Note that if PREMIS is used then the requirements of the CITS Preservation apply and those provided by the CITS 3D PM are in addition to these.
 

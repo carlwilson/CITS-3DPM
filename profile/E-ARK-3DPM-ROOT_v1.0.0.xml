@@ -489,7 +489,7 @@
       PROFILE="https://cits3dpm.dilcis.eu/profile/E-ARK-3dpm-ROOT-v1-0-0.xml">
     </mets:mets>
   </Example>
-  <Example ID="metsHdrElementExample" LABEL="METS example of root METS Header with submission agreements for an eHealth1 IP.">
+  <Example ID="metsRootHdrElementExample" LABEL="METS example of root METS Header with submission agreements for an eHealth1 IP.">
     <mets:metsHdr CREATEDATE="2024-04-24T14:37:49.602+01:00"
         LASTMODDATE="2024-04-24T14:37:49.602+01:00"
         RECORDSTATUS="NEW"
@@ -575,7 +575,7 @@
       </mets:fileGrp>
     </mets:fileSec>
   </Example>
-  <Example ID="struct-map-example" LABEL="METS root example of the mandatory structural map including representations for eHealth1">
+  <Example ID="structMapExample" LABEL="METS root example of the mandatory structural map including representations for eHealth1">
     <mets:structMap ID="struct-map-example" TYPE="PHYSICAL" LABEL="CSIP" xmlns:mets="http://www.loc.gov/METS/">
       <mets:div ID="struct-map-example-div" LABEL="cits-3dpm-example">
         <mets:div ID="struct-map-metadata-div" LABEL="Metadata" DMDID="dmd-ead-file" ADMD="digiprov-premis-file1 rights-premis-file1 rights-premis-file1" />
