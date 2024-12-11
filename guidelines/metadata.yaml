@@ -1,0 +1,11 @@
+title: "CITS 3DPM Data Guideline"
+subtitle: "Guidelines for the Content Information Type Specification for 3D Product Model (CITS 3D PM)"
+abstract: |
+        The purpose of this document is to accompany the CITS 3D Product Model Data Specification and
+        to provider context and rationale for the principles and requirements of the specification. The
+        specification is designed to be used for the transfer to archives as well as for records exchange
+        between different 3D Product Information Model systems. The specification is supported by
+        METS profiles for the Root and Representation METS files and this accompanying Guideline
+        document.
+version: ${RELEASE_VERSION}
+date: ${RELEASE_DATE}
