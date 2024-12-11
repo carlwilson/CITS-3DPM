@@ -29,6 +29,36 @@ markdown-pp SITE.md -o ../../site/index.md
 
 cd "$SCRIPT_DIR" || exit
 
+echo " - Cleaning up guidelines directory..."
+if [ -d "$SCRIPT_DIR/site/guidelines" ]
+then
+  echo " - Removing old site guidelines directory"
+  rm -rf "$SCRIPT_DIR/site/guidelines"
+fi
+mkdir "$SCRIPT_DIR/site/guidelines"
+mkdir "$SCRIPT_DIR/site/guidelines/pdf"
+# git clean -f guidelines/
+cp guidelines/markdown/postface/postface.md guidelines/site/
+cp -rf spec-publisher/res/md/figs site/guidelines/
+cp -rf guidelines/markdown/figs site/guidelines/
+
+echo " - Generating guidelines site and PDF markdown..."
+java -jar ./spec-publisher/target/mets-profile-processor-0.2.0-SNAPSHOT.jar -f ./guidelines/guidelines.yaml -o guidelines/site
+
+echo " - MARKDOWN-PP: generating guidelines page with TOC..."
+cd guidelines/site || exit
+bash "$SCRIPT_DIR/spec-publisher/scripts/create-venv.sh"
+command -v markdown-pp >/dev/null 2>&1 || {
+  tmpdir=$(dirname "$(mktemp -u)")
+  source "$tmpdir/.venv-markdown/bin/activate"
+}
+markdown-pp body.md -o body_toc.md
+
+echo " - MARKDOWN-PP: generating guidelines index.md..."
+markdown-pp SITE.md -o ../../site/guidelines/index.md
+
+cd "$SCRIPT_DIR" || exit
+
 if [ -d _site ]
 then
   echo " - Removing old site directory"

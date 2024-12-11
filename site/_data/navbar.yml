@@ -7,6 +7,14 @@
 - title: "Profile"
   href: "/profile/"
 
+- title: "Guidelines"
+  href: "/"
+  subcategories:
+    - subtitle: "HTML"
+      subextref: "/guidelines/"
+    - subtitle: "PDF"
+      subextref: "/guidelines/pdf/3D_Product_Data_Guideline_v1.0.0.pdf"
+
 - title: "Schema"
   href: "/schema/"
 
