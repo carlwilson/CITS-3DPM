@@ -5,13 +5,13 @@ cd "$SCRIPT_DIR" || exit
 
 echo " - Cleaning up site directory and copying spec-publisher site..."
 git clean -f doc/ site/ specification/
-cp specification/postface/postface.md doc/site/
 cp -rf spec-publisher/site/* site/
 cp -rf spec-publisher/res/md/figs site/
 # Copy remaining collaterel
 cp -rf profile examples specification/figs schema site/
 
 echo " - Generating main site specification and PDF markdown..."
+cp specification/postface/postface.md doc/site/
 mvn clean package -f spec-publisher/pom.xml
 java -jar ./spec-publisher/target/mets-profile-processor-0.2.0-SNAPSHOT.jar -f ./specification.yaml -o doc/site profile/E-ARK-3DPM-ROOT_v1.0.0.xml profile/E-ARK-3DPM-REPRESENTATION_v1.0.0.xml 
 
@@ -37,7 +37,7 @@ then
 fi
 mkdir "$SCRIPT_DIR/site/guidelines"
 mkdir "$SCRIPT_DIR/site/guidelines/pdf"
-# git clean -f guidelines/
+git clean -f guidelines/
 cp guidelines/markdown/postface/postface.md guidelines/site/
 cp -rf spec-publisher/res/md/figs site/guidelines/
 cp -rf guidelines/markdown/figs site/guidelines/

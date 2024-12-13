@@ -68,7 +68,7 @@ The E-ARK SIP specification states that: “According to the Open Archival Infor
 
 The OAIS Reference Model does not specify the format, structure or contents of these information packages. The EU funded E-ARK project (2014-2017) first acknowledged this problem and started to develop a solution in the form of an information package specification. This specification is now part of a set of specifications managed by an independent body named the Digital Information LifeCycle Interoperability Standards Board (DILCIS Board).
 
-According to LOTAR[^1] “The formats of the packages are defined in a Submission Agreement between the producer and the archive.” In the case of building E-ARK and LOTAR compliant information packages, the Submission Agreement will reference the E-ARK Common Specification for Information Packages, the specification for Submission Information Packages (SIP), the specification for Archival Information Packages (AIP), the specification for Dissemniation Information Packages (DIP) and the Content Information Type Specification for 3D Product Data (CITS 3D PM).
+According to LOTAR[^8] “The formats of the packages are defined in a Submission Agreement between the producer and the archive.” In the case of building E-ARK and LOTAR compliant information packages, the Submission Agreement will reference the E-ARK Common Specification for Information Packages, the specification for Submission Information Packages (SIP), the specification for Archival Information Packages (AIP), the specification for Dissemniation Information Packages (DIP) and the Content Information Type Specification for 3D Product Data (CITS 3D PM).
 
 LOTAR defines the minimum content for information packages and the processes for creating them, definitions for the LOTAR terms can be found in the glossary and descriptions of the involved data below.
 
@@ -117,7 +117,7 @@ Within LOTAR PDI also includes Validation and Verification information including
 Administrative data needed for archive data management. Packaging information is that information used to bind and identify the components of an Information Package. - information which, either actually or logically, binds, identifies and relates the CI and PDI.
 
 **Engineering (Digital) Signature**:
-In the context of the LOTAR, a Digital Signature shall be[^2]:
+In the context of the LOTAR, a Digital Signature shall be[^9]:
 
 * uniquely linked to the signatory;
 * capable of identifying the signatory;
@@ -126,13 +126,13 @@ In the context of the LOTAR, a Digital Signature shall be[^2]:
 * linked to the data to which it relates in such a manner that:
 * any subsequent change of the data is detectable.
 
-An Engineering Sgnature is a special type of Digital Signature that expresses and fixes a volition of the signatory. It gives evidence of[^3]:
+An Engineering Sgnature is a special type of Digital Signature that expresses and fixes a volition of the signatory. It gives evidence of[^10]:
 
 * the process of testifying quality of data against process / quality requirements by linking the signature owner to the data;
 * the identity of the signatory by usage of appropriate methods of authentication;
 * the integrity of the data by using appropriate methods protecting the signed object against unauthorized changes.
 
-The Engineering Signature is created individually for each document and is used within LOTAR  for the authentication of the data ready for archiving and stoage. An Engineering Signature includes[^4]:
+The Engineering Signature is created individually for each document and is used within LOTAR  for the authentication of the data ready for archiving and stoage. An Engineering Signature includes[^11]:
 
 * owner name;
 * public key from owner and certification company;
@@ -169,7 +169,7 @@ LOTAR requires the inclusion of information to support Validation and Verificati
 
 ## Descriptive Metadata
 
-According to LOTAR[^5]: “The producer creates a set of Descriptive Information (DI), which includes archive metadata meeting the archives requirements (according to ISO 14721:2003 – OAIS).”
+According to LOTAR[^12]: “The producer creates a set of Descriptive Information (DI), which includes archive metadata meeting the archives requirements (according to ISO 14721:2003 – OAIS).”
 
 Neither CSIP or LOTAR prescribe specific schemas for Descriptive Information and so this is left to be determined by the user organisation. CSIP states that this should be according to a standardised schema and EAD is generally recommended. 
 
@@ -193,11 +193,11 @@ According to the CITS PREMIS: “When using preservation metadata together with 
 
 It is recommended that users review the CITS PREMIS specification.
 
-In addition, LOTAR states[^6] that “the producer shall integrate Validation properties into the PDI to ensure that the existence of Validation Properties for later automatic Validation processes.  As the Content Objects and Validation Properties related to Content Objects are held at Representation and as CITS 3D PM also requires the inclusion of Digital Signatures with each Representation then CITS 3D PM recommends the use of PREMIS at Representation level.
+In addition, LOTAR states[^13] that “the producer shall integrate Validation properties into the PDI to ensure that the existence of Validation Properties for later automatic Validation processes.  As the Content Objects and Validation Properties related to Content Objects are held at Representation and as CITS 3D PM also requires the inclusion of Digital Signatures with each Representation then CITS 3D PM recommends the use of PREMIS at Representation level.
 
-[^1]:EN/NAS 9300 Part 011, 6.9
-[^2]:EN/NAS 9300 Part 005, 3.4
-[^3}: EN/NAS 9300 Part 005, 3.4.1
-[^4]: EN/NAS 9300 Part 005, 7.1
-[^5]: EN/NAS 9300 Part 011, 6.8
-[^6]: EN/NAS 9300 Part 011, 6.7
+[^8]: EN/NAS 9300 Part 011, 6.9
+[^9]: EN/NAS 9300 Part 005, 3.4
+[^10]: EN/NAS 9300 Part 005, 3.4.1
+[^11]: EN/NAS 9300 Part 005, 7.1
+[^12]: EN/NAS 9300 Part 011, 6.8
+[^13]: EN/NAS 9300 Part 011, 6.7
