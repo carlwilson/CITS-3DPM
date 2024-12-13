@@ -67,7 +67,7 @@ According to the Common Specification: “Regardless of the formats and systems 
 * to provide for efficient reuse
 * to satisfy historical, cultural, scientific and business interest.
   
-In LOTAR the objectives for keeping data for long-term are clearly distinguished into two major categories{^1]:
+In LOTAR the objectives for keeping data for long-term are clearly distinguished into two major categories[^3]:
 
 * Legal requirements/certification requirements, such as for proof of technical documentation for actions in law
 * Business requirements, such as keeping knowledge
@@ -91,7 +91,7 @@ The use cases considered within the specification are therefore:
 
 ### Long-term archiving
 
-Within LOTAR, long-term archiving has a specific, defined meaning as follows[^2]:
+Within LOTAR, long-term archiving has a specific, defined meaning as follows[^4]:
 
 * Storage of a copy of data in an appropriate way for record, certification and legal purposes
 * Data will be preserved and kept available for use within the archive and possibly for further use
@@ -111,7 +111,7 @@ E-ARK CSIP does not attempt to make a definition of archiving, but as both CSIP 
 
 ### Data Model
 
-The following is the LOTAR description of its data model. The contents of data packages are also described in LOTAR as detailed below. Broadly, the LOTAR data model considers the data comprising a Representation of the product model as follows[^3]:
+The following is the LOTAR description of its data model. The contents of data packages are also described in LOTAR as detailed below. Broadly, the LOTAR data model considers the data comprising a Representation of the product model as follows[^5]:
 
 * The core data model
 * The required metadata
@@ -128,7 +128,7 @@ The core model identifies the essential minimum of data which is required to pre
 
 Metadata considered within the LOTAR data model is limited to data used to retrieve the package and data used to Validate the data and its provenance.
 
-The scope of the metadata depends on the particular use cases it applies to, and is detailed in the domain specific parts. These also detail any data quality criteria applicable to the metadata. According to LOTAR: “Additional metadata may be applied, and should be agreed in the ingest (submission) agreement. Data used in the internal management of the archive is outside of the scope of LOTAR. In addition the detailed intellectual property rights information may be explicitly identified, described, documented in the Archival Information package during ingest and after the retrieval process.”[^4]
+The scope of the metadata depends on the particular use cases it applies to, and is detailed in the domain specific parts. These also detail any data quality criteria applicable to the metadata. According to LOTAR: “Additional metadata may be applied, and should be agreed in the ingest (submission) agreement. Data used in the internal management of the archive is outside of the scope of LOTAR. In addition the detailed intellectual property rights information may be explicitly identified, described, documented in the Archival Information package during ingest and after the retrieval process.”[^6]
 
 It is implicit in LOTAR that metadata accompanies data in the submission to the archive and is used within the digital repository or OAIS to aid the retrieval of data and to provide proof of provenance. It is not explicitly required that metadata is included in the package, but E-ARK CSIP sets minimum standards for this such that information packages are completely self describing and interoperable outside the digital repository or OAIS.
 
@@ -138,7 +138,7 @@ A Digital Signature is a sort of seal of digital data. It is produced by using m
 
 A Digital Signature has to be renewed every approximately 5-6 years. For LOTAR, therefore, the Digital Signature is only used to safeguard the data integrity for the short period between the producers' release and the transfer to the archive system. Time stamps (Digital Signatures authenticated by 3rd party services such as to identify producers and time of creation are used within LOTAR alongside stored data (AIPs). As this information is held outside of the archival package it is out of scope of the E-ARK specification. The encoding of Digital Signatures within PREMIS in Submission Information Packages (SIPs), should be adequate for verification on ingest into the archive.
 
-According to LOTAR[^5]:
+According to LOTAR[^7]:
 
 > “An  Engineering Signature supports a business release process. With it the data producer asserts that the prepared data fits with the process and quality requirements from the engineering point of view. It may also identify the approver. Similarly to metadata the engineering signature is domain dependent and the use of it should be agreed between the producer and the archive.”
 
@@ -169,8 +169,8 @@ LOTAR requires that each Representation of the Product Model be verified using d
   
 A reference to the Verification results report should be included in Descriptive Information (LOTAR). Good archival practice states that we should not only include the reference to Verification results in descriptive metadata but should include the Data Quality Rules and the Verification reports within each Representation. The CITS also suggests that Verification events and results  are recorded with preservation metadata (PREMIS).
 
-[^1]: EN/NAS 9300 Part 003, 4.1.3
-[^2]: EN/NAS 9300 Part 003, 4.2.6
-[^3]: EN/NAS 9300 Part 003, 7.3.2.1
-[^4]: EN/NAS 9300 Part 003, 7.3.2.3
-[^5]: EN/NAS 9300 Part 003, 7.3.2.4
+[^3]: EN/NAS 9300 Part 003, 4.1.3
+[^4]: EN/NAS 9300 Part 003, 4.2.6
+[^5]: EN/NAS 9300 Part 003, 7.3.2.1
+[^6]: EN/NAS 9300 Part 003, 7.3.2.3
+[^7]: EN/NAS 9300 Part 003, 7.3.2.4

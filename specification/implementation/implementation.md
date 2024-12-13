@@ -75,7 +75,7 @@ LOTAR requires that a Digital Signature is provided on Ingest, i.e. production o
 
 **3DPM8:** Information Packages MAY contain Digital Signatures associated with Product Model Representations that are encoded within a Representation PREMIS file.
 
-This specification recommends that any Digital Signature information be recorded within PREMIS [Section 2](specification/specification.md). PREMIS also requires that the operations to be performed for validating a Digital Signature are known. This can be by means of a canonicalized method, or if by a local method either documentation or a persistent link to archived documentation or a resource must be provided.
+This specification recommends that any Digital Signature information be recorded within PREMIS [see Specification](#specification). PREMIS also requires that the operations to be performed for validating a Digital Signature are known. This can be by means of a canonicalized method, or if by a local method either documentation or a persistent link to archived documentation or a resource must be provided.
 
 **3DPM9:** If Digital Signatures are provided then documentation MUST be included in the documentation/authentication folder or a persistent link provided to a resource.
 

@@ -37,9 +37,7 @@ PREMIS can be used in addition to METS to support compliance with LOTAR in recor
 
 #### Preservation information
 
-**3D PM54:** Preservation information for each Representation (e.g. provenance, preservation actions) MAY be recorded within the PREMIS file located in the representation/metadata/preservation folder and must follow guidelines set out in CITS PREMIS. 
-
-<a name="Section4.5.5"><a/>
+**3D PM54:** Preservation information for each Representation (e.g. provenance, preservation actions) MAY be recorded within the PREMIS file located in the representation/metadata/preservation folder and must follow guidelines set out in CITS PREMIS.
 
 #### Validation and Verification information
 
@@ -53,4 +51,4 @@ From **3D PM7:** AIPs MAY contain Digital Signatures associated with Product Mod
 
 **3D PM57:** If a Digital Signature is provided then further properties of the signature SHOULD be provided within the signatureProperties element to at least include a date and time of the signature. The granular structure of signaturePropertiesis not defined by PREMIS but an example of a possible date record within the signatureProperties element is shown below.
 
-**3D PM58:** If a Digital Signature is provided, then information about the signer’s public key SHOULD be provided within the keyInformation element. Different types of keys have different structures and parameters and so PREMIS does not define the structure of this container element and recommends practice from “KeyInfo” in the W3C’s XML-Signature Syntax and Processing (http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/) to represent key values.
+**3D PM58:** If a Digital Signature is provided, then information about the signer’s public key SHOULD be provided within the keyInformation element. Different types of keys have different structures and parameters and so PREMIS does not define the structure of this container element and recommends practice from “KeyInfo” in the W3C’s XML-Signature Syntax and Processing (<http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/>) to represent key values.

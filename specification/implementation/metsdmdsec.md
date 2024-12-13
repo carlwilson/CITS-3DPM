@@ -10,7 +10,7 @@ The administrative metadata section contains four sub-sections each used to reco
 
 The CSIP (and METS) categorise preservation metadata as administrative metadata, specifically digital provenance metadata (following the avaiable guidelines published by the Library of Congress): (<http://www.loc.gov/standards/premis/guidelines2017-premismets.pdf>) and hence all preservation metadata should be referenced from a digiprovMD element within the amdSec.
 
-As detailed Rights information is required by LOTAR for the package then CITS 3D PM recommends the inclusion of a PREMIS file in the metadata/preservation folder containing detailed Rights information as described in [Section 4.5.3](#Section4.5.3) and any digital provenance metadata as described in the CITS Preservation Metadata.
+As detailed Rights information is required by LOTAR for the package then CITS 3D PM recommends the inclusion of a PREMIS file in the metadata/preservation folder containing detailed Rights information as described in [Rights Metadata](#rights-metadata) and any digital provenance metadata as described in the CITS Preservation Metadata.
 
 #### Root METS file metadata section (element fileSec)
 
